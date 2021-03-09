@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <index-navbar></index-navbar>
 
     <!-- Hero -->
@@ -8,12 +8,12 @@
         <div class="relative  pt-12 lg:pt-20 pb-40">
             <div class="container mx-auto px-4">
             <div class="flex flex-wrap ">
-                <div class="w-full lg:w-1/2 px-2 mb-12 md:mb-20 lg:mb-0 flex items-center">
+                <div class="w-full lg:w-1/2 px-2 mb-12 md:mb-20 lg:mb-0 flex lg:items-center">
                     <div class="w-full text-center lg:text-left">
                         <div class="max-w-2xl mx-auto lg:mx-0 mb-3">
                             <h2 class="mb-3 text-4xl lg:text-6xl font-bold font-heading">
                                 <span>An International Student's</span> 
-                                <span class="text-green-600"> Personal <br> Guide</span>
+                                <span class="text-green-600"> Personal <br class="hidden"> Guide</span>
                             </h2>
                         </div>
                         <div class="max-w-xl mx-auto lg:mx-0">
@@ -25,7 +25,7 @@
                             <label for="hero-field" class="leading-7 text-sm text-gray-600"></label>
                             <input type="text" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-900 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
-                            <button class="inline-flex text-white bg-green-500 border-0 py-3 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</button>
+                            <button class="inline-flex text-white bg-green-500 border-0 py-3 px-3 lg:py-3 lg:px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</button>
                         </div>
                         <!-- <div>
                             <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 px-4 flex items-center justify-center pl-24">
+                <div class="w-full lg:w-1/2 px-4 flex items-center justify-center lg:pl-24">
                     <div class="relative" style="z-index: 0;">
                         <img class="max-h-1/4 w-full max-w-4xl object-cover rounded-3xl md:rounded-br-none" :src="students" alt="">
                         <img class="hidden md:block absolute" style="top:-2rem; right: 3rem; z-index: -1;" :src="greendarkup" alt="">
@@ -52,14 +52,14 @@
 
 <!-- Features -->
         <section class=" bg-gray-50 ">
-            <div class="py-20 bg-gray-50 radius-for-skewed">
-              <div class="container mx-16">
+            <div class="py-20 -mt-20 bg-gray-50 radius-for-skewed">
+              <div class="container lg:mx-16 mx-5 ">
                 <div class="flex flex-wrap items-center">
-                  <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
-                    <div class="max-w-xl lg:mx-auto -mt-10">
+                  <div class="w-5/6 lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="max-w-md lg:mx-auto -mt-10">
                       <span class="text-green-600 font-bold">A COMMUNITY-FIRST PLATFORM</span>
                       <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">We Help You Navigate Your Way To <SPAN class="text-green-600">Success</SPAN></h2>
-                      <p class="mb-6 pt-4 text-gray-900 leading-9 tracking-normal max-w-xl">
+                      <p class="mb-6 pt-4 text-gray-900 leading-9 tracking-normal max-w-md lg:max-w-xl">
                         There are over 5.5 million international students in the world  contributing $300bn to the global economy <b>(U.S.A - $45bn).</b>  <br>
                         Yet, these very important contributors to global economy, innovation and science are poorly supported, left confused by conflicting immigration policies, often treated with disdain by their hosts, required by local companies to have vague "local" experience and are often left stranded.
                         <br>
@@ -89,7 +89,7 @@
                     </div>
                   </div>
                   <!--  -->
-                  <div class="w-full lg:w-1/2 flex flex-wrap pl-6">
+                  <div class="w-5/6 lg:w-1/2 flex flex-wrap lg:pl-6">
                     <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
                       <div class="mb-8 py-6 pl-6 pr-4 shadow rounded bg-white">
                         <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
@@ -144,8 +144,8 @@
           
         <div class="container mx-8">
           <div class="flex flex-wrap">
-            <div class="w-full md:w-1/2  order-1 md:order-0 pl-16 ">
-              <div class="max-w-xl">
+            <div class="lg:w-1/2 w-5/6 md:w-1/2  order-1 md:order-0 lg:pl-16 ">
+              <div class="lg:max-w-xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">During Your Studies</h2>
                 <p class="mb-3 leading-loose text-blueGray-400 text-justify">
                     We help you optimize your trajectory matching you with resources that will help you achieve your goal 
@@ -176,7 +176,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 px-3 pl-20  order-0 md:order-1 mb-12 pt-24 md:mb-0">
+            <div class="w-5/6 md:w-1/2 px-3 lg:pl-20  order-0 md:order-1 mb-12 lg:pt-24 md:mb-0">
               <img class="sm:max-w-sm lg:max-w-full mx-auto" :src="feature2" alt="" />
             </div>
             
@@ -188,11 +188,11 @@
       <section class="py-20">
         <div class="container">
           <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/2 px-3 order-0 pl-24 pt-20 md:order-1 mb-12 md:mb-0">
+            <div class="w-full md:w-1/2 px-10 order-0 lg:pl-24  pt-20 md:order-1 mb-12 md:mb-0">
               <img class="sm:max-w-sm lg:max-w-full mx-auto" :src="feature1" alt="">
             </div>
-            <div class="w-full md:w-1/2 px-3 order-1 md:order-0 pl-32">
-              <div class="max-w-2xl">
+            <div class="w-full md:w-1/2 px-10 order-1 md:order-0 lg:pl-32">
+              <div class="lg:max-w-2xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">After Your Studies</h2>
                 <p class="mb-4 leading-loose text-blueGray-400 text-justify ">
                     We know first hand how intense the months before and after your graduation is. We provide you with the best tools & resources to help you achieve your dreams. 
@@ -230,16 +230,16 @@
 <div class="bg-gray-50">
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
     <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-      <span class="block text-3xl">We're excited to have you join us.</span>
-      <span class="block text-green-600">Join Our Waiting List Today</span>
+      <span class="block text-3xl lg:text-3xl">We're excited to have you join us.</span>
+      <span class="block text-3xl lg:text-4xl text-green-600">Join Our Waiting List Today</span>
     </h2>
-    <div class="mt-8 flex lg:mt-8 lg:flex-shrink-0 mr-24">
+    <div class="mt-8 flex lg:mt-8 lg:flex-shrink-0 lg:mr-24">
       <div class="flex pb-8 w-full md:justify-start items-end">
         <div class="">
-        <label for="hero-field" class="leading-7 text-sm text-gray-600"></label>
+        <label for="hero-field" class="lg:leading-7 text-sm text-gray-600"></label>
         <input type="text" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out">
         </div>
-        <button class="inline-flex text-white bg-green-600 border-0 py-4 px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
+        <button class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
     </div>
   </div>
 </div>

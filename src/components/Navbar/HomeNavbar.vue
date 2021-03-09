@@ -27,8 +27,8 @@
           <li>
             <a
               href="/"
-              aria-label="Product pricing"
-              title="Product pricing"
+              aria-label="Community"
+              title="Community"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Community</a
             >
@@ -157,18 +157,18 @@
                 <ul class="space-y-4">
                   <li>
                     <a
-                      href="/"
-                      aria-label="Our product"
-                      title="Our product"
+                      href="/career-hub"
+                      aria-label="Career Hub"
+                      title="Career Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Career Hub</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/"
-                      aria-label="Our product"
-                      title="Our product"
+                      href="/immigration-hub"
+                      aria-label="Immigration Hub"
+                      title="Immigration Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Immigration Hub</a
                     >
@@ -176,8 +176,8 @@
                   <li>
                     <a
                       href="/"
-                      aria-label="Product pricing"
-                      title="Product pricing"
+                      aria-label="Community"
+                      title="Community"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Community</a
                     >
