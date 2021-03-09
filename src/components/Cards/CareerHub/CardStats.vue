@@ -22,7 +22,7 @@
 					</svg>
 				</div>
 				<div class="flex flex-col justify-center align-middle">
-					<p class="text-3xl font-semibold leading-none">7500</p>
+					<p class="text-3xl font-semibold leading-none">75</p>
 					<p class="capitalize">New customers</p>
 				</div>
 			</div>
