@@ -16,17 +16,19 @@
             <p class="text-base text-gray-700 md:text-lg">
               An AI-powered dashboard that matches talented international students like you with the right immigration path. <span class="relative inline-block text-teal-accent-400 font-semibold">
                   <span class="relative">
-                    <div class="absolute inset-x-0 bottom-0 h-1 transform -skew-x-12 bg-teal-accent-400"></div>
+                    <!-- <div class="absolute inset-x-0 bottom-0 h-1 transform -skew-x-12 bg-teal-accent-400"></div> -->
                     Plus tons of tested guides, mini-bootcamps and resources</span>
                     </span>
             </p>
           </div>
-          <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors lg:text-xl duration-200 text-teal-accent-400 hover:underline">
+          <router-link to="/immigration-hub">
+          <a aria-label="" class="inline-flex items-center font-semibold transition-colors lg:text-xl duration-200 text-teal-accent-400 hover:underline">
             Learn more
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
               <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
             </svg>
           </a>
+          </router-link>
         </div>
         <div class="relative mx-12">
           <svg class="absolute w-full text-teal-accent-400" fill="currentColor" viewBox="0 0 600 392">

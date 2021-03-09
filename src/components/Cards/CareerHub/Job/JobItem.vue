@@ -38,7 +38,7 @@
                     <span class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.Visa}}</span>
                     
                     <!-- Visa Type -->
-                    <span key="" class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">OPT</span>
+                    <!-- <span key="" class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">OPT</span> -->
                     <span key="" class="px-4 py-2 mr-4 mt-2 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.STEM}}</span>
                     
                 </div>

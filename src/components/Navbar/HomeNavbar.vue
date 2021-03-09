@@ -15,13 +15,14 @@
             </router-link>
           </li>
           <li>
+             <router-link to="/immigration-hub" >
             <a
-              href="/"
-              aria-label="Our product"
+              aria-label="Immigration Hub"
               title="Our product"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Immigration Hub</a
             >
+             </router-link>
           </li>
           <li>
             <a
