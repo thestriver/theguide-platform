@@ -84,7 +84,11 @@
 
 				</div>
 
-                <button
+                <button  v-scroll-to="{ 
+                    el: '#cardopp',
+                    easing: [.6, .80, .30, 1.9],
+                    duration: 2000 
+                }"
                 type="submit" v-if="submitted" @click="openOpportunities()"
                 class="mt-8 inline-flex items-center justify-center h-12 px-5 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
                 >Submit</button>
@@ -94,9 +98,8 @@
 
         <!-- Card -->
 
-        <div v-if="opportunities" class="mt-5 bg-gray-100 lg:px-20 py-2 ">
+        <div v-if="opportunities" id="cardopp" class="mt-5 bg-gray-100 lg:px-20 py-2 ">
             <h1 class=" text-teal-accent-400 font-bold my-6 ">Recommended Paths For You</h1>
-            <p class="lg:mb-14">  <span class="bg-teal-accent-400  ">Coming Soon:</span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides, successful stories and a very friendly and helpful community </p>
             <ul>
                 <div v-if="
                  selected === 'USA' && open === 'No' || selected === 'USA' && open === 'Yes' || selected === 'Canada' && open === 'Yes' 
@@ -162,6 +165,9 @@
                 <li>Post Study Permit</li>
                 </div>
             </ul>
+
+            <p class="lg:mb-14">  <span class="bg-teal-accent-400  ">Coming Soon:</span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides, successful stories and a very friendly and helpful community </p>
+            
 
         </div>
       
