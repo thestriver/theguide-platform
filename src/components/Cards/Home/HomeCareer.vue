@@ -1,6 +1,6 @@
 <template>
     <div class="lg:bg-gray-900 lg:mx-16 px-2 rounded-xl border-t-2 flex items-center p-2 lg:p-5 overflow-hidden relative ">
-    <div class="w-full max-w-7xl rounded-2xl bg-white shadow-xl sm:p-10 lg:p-5 lg:mx-24 mt-16 mb-16 text-gray-800 relative md:text-left mt-5 mb-5">
+    <div class="w-full max-w-7xl rounded-2xl bg-white shadow-xl sm:p-10 lg:p-5 lg:mx-8 text-gray-800 relative md:text-left mt-8 mb-8">
         <div class="px-4 sm:py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-1">
             <div class="flex flex-col lg:flex-row">
                     <div class="mb-2 lg:mb-0 lg:w-1/2 lg:pr-5">
@@ -29,7 +29,7 @@
                         Interact with our Career Bot
                         </h5>
                         <p class="text-base text-gray-700 md:text-lg sm:mb-2">
-                        It helps tailor our opportunities to suit your taste. 
+                        and tailor our opportunities to suit your preferences.
                         </p>
                     </div>
                     <div class="flex items-center">

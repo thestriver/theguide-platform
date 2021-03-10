@@ -15,6 +15,11 @@
             </div>
           </div>
           <div class="flex flex-col justify-between flex-grow text-left">
+            <div>
+              <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              COMING SOON
+              </p>
+            </div>
               
             <div>
               <h6 class="mb-2 font-semibold leading-5 lg:text-3xl">

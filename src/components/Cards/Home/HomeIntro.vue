@@ -17,24 +17,24 @@
               <span class="inline-block text-teal-accent-400">Guide</span>
             </h2>
             <p class="text-base text-gray-700 md:text-lg">
-              Our goal is to be the only platform you need to achieve you career and immigration goals. <br class="hidden md:block" />
-              <span class="inline-block text-teal-accent-400 font-semibold">The Guide</span> was created to ensure that international students have the  access to the 
+              Our goal is to be the only platform you need. <br class="hidden md:block" />
+              <span class="inline-block text-teal-accent-400 font-semibold">The Guide</span> was created to ensure that you have  access to the 
               <span class="relative">
                 <div class="absolute inset-x-0 bottom-0 h-1 transform -skew-x-12 bg-teal-accent-400"></div>
                 <span class="relative inline-block text-teal-accent-400 font-semibold">RIGHT</span>
               </span>
-              opportunities that help them achieve their goals.
+              opportunities that help you achieve your career and immigration goals.
             </p>
             
           </div>
-          <div class="text-left">
+          <!-- <div class="text-left">
             <a href="/" aria-label="" class="inline-flex lg:text-xl items-center font-semibold transition-colors duration-200 text-teal-accent-400 hover:underline">
               Learn more
               <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
                 <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
         <div class="flex items-center justify-center -mx-4 lg:pl-8">
           <div class="flex flex-col items-end px-3">

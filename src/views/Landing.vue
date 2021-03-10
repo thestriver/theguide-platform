@@ -17,8 +17,9 @@
                             </h2>
                         </div>
                         <div class="max-w-xl mx-auto lg:mx-0">
-                        <p class="mb-6 mt-4 text-gray-900 leading-loose">
-                            The Guide is a platform that connects international students with tools and resources that helps them achieve their educational, career and immigration goals. 
+                        <p class="mb-6 mt-6 text-gray-900 leading-loose">
+                            The Guide connects international students with tailored opportunities, tools and resources that help them achieve 
+                            their career and immigration goals. 
                         </p>
                         <div class="flex pb-8 w-full md:justify-start justify-center items-end">
                             <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
@@ -36,7 +37,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 px-4 flex items-center justify-center lg:pl-24">
                     <div class="relative" style="z-index: 0;">
-                        <img class="max-h-1/4 w-full max-w-4xl object-cover rounded-3xl md:rounded-br-none" :src="students" alt="">
+                        <img class="max-h-1/4 w-full max-w-4xl object-cover rounded-3xl " :src="students" alt="">
                         <img class="hidden md:block absolute" style="top:-2rem; right: 3rem; z-index: -1;" :src="greendarkup" alt="">
                         <img class="hidden md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;" :src="winggreendown" alt="">
                         <img class="hidden md:block absolute" style="top:3rem; right: -3rem; z-index: -1;" :src="grayright" alt="">
@@ -53,83 +54,75 @@
 <!-- Features -->
         <section class=" bg-gray-50 ">
             <div class="py-20 -mt-20 bg-gray-50 radius-for-skewed">
-              <div class="container lg:mx-16 mx-5 ">
+              <div class="container lg:mx-1 mx-5 ">
                 <div class="flex flex-wrap items-center">
                   <div class="w-5/6 lg:w-1/2 mb-12 lg:mb-0">
                     <div class="max-w-md lg:mx-auto -mt-10">
                       <span class="text-green-600 font-bold">A COMMUNITY-FIRST PLATFORM</span>
                       <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">We Help You Navigate Your Way To <SPAN class="text-green-600">Success</SPAN></h2>
-                      <p class="mb-6 pt-4 text-gray-900 leading-9 tracking-normal max-w-md lg:max-w-xl">
-                        There are over 5.5 million international students in the world  contributing $300bn to the global economy <b>(U.S.A - $45bn).</b>  <br>
-                        Yet, these very important contributors to global economy, innovation and science are poorly supported, left confused by conflicting immigration policies, often treated with disdain by their hosts, required by local companies to have vague "local" experience and are often left stranded.
-                        <br>
-                        At The Guide, we know, firsthand, how this hurts and having successfully navigated the experience, we want to help others. 
-                        We're empowering these students by bridging the gap between them and their goals.
+                      <div class="mb-6 pt-4 text-gray-900 leading-8 tracking-normal max-w-md lg:max-w-xl">
+                        <p>There are over 5.5 million international students in the world  contributing $300bn to the global economy <b>(U.S.A - $45bn).</b></p>  
+                        <p class="py-2">
+                        Yet, these very important contributors to global economy, innovation and science are poorly supported, left confused by conflicting 
+                        immigration policies, often treated with disdain by their hosts, required by local companies to have vague "local" working experience 
+                        and are often left stranded.
                         </p>
-                      <!-- <ul class="text-gray-500 font-bold">
-                        <li class="flex mb-4">
-                          <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                          </svg>
-                          <span>Vestibulum viverra ante non libero</span>
-                        </li>
-                        <li class="flex mb-4">
-                          <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                          </svg>
-                          <span>Morbi mollis metus pretium ultrices tincidunt</span>
-                        </li>
-                        <li class="flex mb-4">
-                          <svg class="mr-2 w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                          </svg>
-                          <span>Etiam lectus nunc, commodo et risus in</span>
-                        </li>
-                      </ul> -->
+                        <p>At The Guide, we know, firsthand, how this hurts and having successfully navigated the experience, we want to help others. 
+                        We're empowering these students by bridging the gap between them and their goals.</p>
+                      </div>
+                      
                     </div>
                   </div>
                   <!--  -->
                   <div class="w-5/6 lg:w-1/2 flex flex-wrap lg:pl-6">
                     <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
                       <div class="mb-8 py-6 pl-6 pr-4 shadow rounded bg-white">
-                        <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
+                        <span class="mb-4 inline-block p-3 rounded-lg bg-green-200">
                           <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                           </svg>
                         </span>
-                        <h4 class="mb-2 text-2xl font-bold font-heading">Personal CRM</h4>
-                        <p class="text-gray-500 leading-loose">We provide a beautiful personal dashboard that helps you keep track of your goals. We understand there is so much at stake and our tested tools will help you as ace your grades.</p>
+                        <h4 class="mb-2 text-2xl font-bold font-heading">Career Hub</h4>
+                        <p class="text-gray-900 leading-loose">
+                          A beautiful personal dashboard that provides exclusive access to the right job opportunities with innovative companies who are actually excited and want to work with talented international students like you.
+                        </p>
                       </div>
                       <div class="py-6 pl-6 pr-4 shadow rounded bg-white">
-                        <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
-                          <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                          </svg>
-                        </span>
-                        <h4 class="mb-2 text-2xl font-bold font-heading">Career Hub</h4>
-                        <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                    <div class="w-full md:w-1/2 lg:mt-16 px-4">
-                      <div class="mb-8 py-6 pl-6 pr-4 shadow rounded-lg bg-white">
-                        <span class="mb-4 inline-block p-3 rounded bg-green-100">
-                          <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                          </svg>
-                        </span>
-                        <h4 class="mb-2 text-2xl  font-bold font-heading">Community</h4>
-                        <p class="text-gray-500 leading-loose">We provide an online community of like-minds helping international students get access to the specific support and resources they need </p>
-                      </div>
-                      <div class="py-6 pl-6 pr-4 shadow rounded-lg bg-white">
-                        <span class="mb-4 inline-block p-3 rounded bg-green-100">
+                        <span class="mb-4 inline-block p-3 rounded-lg bg-green-200">
                           <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                             <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
                           </svg>
                         </span>
                         <h4 class="mb-2 text-2xl font-bold font-heading">Immigration Hub</h4>
-                        <p class="text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-gray-900 leading-loose">
+                          Country-specific, successful and well-tested suite of tools and guides that match talented international 
+                          students with the right immigration path for them.
+
+
+                        </p>
                       </div>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:mt-52 px-4">
+                      <div class="mb-8 py-6 pl-6 pr-4 shadow rounded-lg bg-white">
+                        <span class="mb-4 inline-block p-3 rounded bg-green-200">
+                          <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          </svg>
+                        </span>
+                        <h4 class="mb-2 text-2xl  font-bold font-heading">Community</h4>
+                        <p class="text-gray-900 leading-loose">We provide an online community of like-minds helping international students get access to the specific support and resources they need </p>
+                      </div>
+                      <!-- <div class="py-6 pl-6 pr-4 shadow rounded-lg bg-white">
+                        <span class="mb-4 inline-block p-3 rounded bg-green-200">
+                          <svg class="w-10 h-10 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                          </svg>
+                        </span>
+                        <h4 class="mb-2 text-2xl font-bold font-heading">Immigration Hub</h4>
+                        <p class="text-gray-900 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -148,26 +141,26 @@
               <div class="lg:max-w-xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">During Your Studies</h2>
                 <p class="mb-3 leading-loose text-blueGray-400 text-justify">
-                    We help you optimize your trajectory matching you with resources that will help you achieve your goal 
-                    i.e. We guide you as you pursue the best grades, secure your first credit card, their first car - <span class="text-green-600 font-bold"> think of us as your personal guide. A secret weapon to advance your goals.</span>  <br>
+                    We help you optimize your trajectory matching you with resources that will help you achieve your dreams. 
+                    <span class="text-green-600 font-bold"> Think of us as your personal guide. A secret weapon to advance your goals.</span>  <br>
                     Plus a rich community with like-minds and a suite of resources tailored to ease your navigation through your daunting time as an internation student
                 </p>
                 <ul class="pb-4">
-                    <li class="">
+                    <!-- <li class="">
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">1</span>
                       <span> A Personal CMS - helping you track your academic and financial goals</span>
+                    </li> -->
+                    <li class="py-2">
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">1</span>
+                      <span> A Career Hub tailored to your preferences. Filled with internships and job opportunities with partner companies who are excited to work with international students </span>
                     </li>
                     <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">2</span>
-                      <span>Career Hub - Tailored for you. Filled with internships and job opportunities with partner companies who are excited to work with international students </span>
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">2</span>
+                      <span>An online community of international students driven by similar goals like you.</span>
                     </li>
                     <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">3</span>
-                      <span>An online community of international students</span>
-                    </li>
-                    <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">4</span>
-                      <span>Resources Hub &amp; lots more. </span>
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">3</span>
+                      <span> A Resources Hub &amp; lots more. </span>
                     </li>
                   </ul>
                 
@@ -195,25 +188,25 @@
               <div class="lg:max-w-2xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">After Your Studies</h2>
                 <p class="mb-4 leading-loose text-blueGray-400 text-justify ">
-                    We know first hand how intense the months before and after your graduation is. We provide you with the best tools & resources to help you achieve your dreams. 
-                    Matching you with highly-successful and well-tested career and immigration services. 
-                    Partnership with top companies who are excited to work with talented international students like you.
+                    We know first hand how intense the months before and after your graduation are. We provide you with the best tools & resources to help you achieve your dreams. 
+                 <br>   Matching you with highly-successful and well-tested career and immigration services. 
+                    Partnerships with top companies who are excited to work with talented international students like you.
 
                 </p>
                 <ul class="mb-6">
                     <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">1</span>
-                      <span>Career Hub - After studies Job Boards with a curated section for add-on career services.</span>
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">1</span>
+                      <span>Career Hub - A post-study career hub with a curated section for premium career services.</span>
                     </li>
                     <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">2</span>
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">2</span>
                       <span>
-                        Immigration Hub - Best Immigration Pipeline/Strategy unique to each country
+                        Immigration Hub - Get the best Immigration Strategies unique to each country.
                         </span>
                     </li>
                     <li class="py-2">
-                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">3</span>
-                      <span>Legal, HR, Finance resources + partnerships</span>
+                      <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">3</span>
+                      <span>Add-on services + Exclusive partnerships</span>
                     </li>
                   </ul>
                 <div class="flex justify-start">

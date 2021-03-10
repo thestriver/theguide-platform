@@ -11,10 +11,10 @@
             <h2 class="max-w-lg mb-6 font-sans lg:text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Immigration Hub<br class="hidden md:block" />
               you
-              <span class="inline-block text-teal-accent-400">will love</span>
+              <span class="inline-block text-teal-accent-700">will love</span>
             </h2>
             <p class="text-base text-gray-700 md:text-lg">
-              An AI-powered dashboard that matches talented international students like you with the right immigration path. <span class="relative inline-block text-teal-accent-400 font-semibold">
+              An AI-powered dashboard that matches talented international students like you with the right immigration path. <span class="relative inline-block text-teal-accent-700 font-semibold">
                   <span class="relative">
                     <!-- <div class="absolute inset-x-0 bottom-0 h-1 transform -skew-x-12 bg-teal-accent-400"></div> -->
                     Plus tons of tested guides, mini-bootcamps and resources</span>
@@ -22,8 +22,8 @@
             </p>
           </div>
           <router-link to="/immigration-hub">
-          <a aria-label="" class="inline-flex items-center font-semibold transition-colors lg:text-xl duration-200 text-teal-accent-400 hover:underline">
-            Learn more
+          <a aria-label="" class="inline-flex items-center font-semibold transition-colors lg:text-xl duration-200 text-teal-accent-700 hover:underline">
+            Check It Out
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
               <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
             </svg>
