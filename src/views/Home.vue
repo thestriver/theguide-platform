@@ -1,7 +1,8 @@
 <template>
   <div class="home">
    <home-navbar></home-navbar>
-   <home-intro></home-intro>
+   <!-- <home-intro></home-intro> -->
+   <h2 class="text-4xl font-bold text-left lg:mx-20 lg:my-5 ">Welcome, <span class="text-teal-accent-400">Tunde</span> </h2>
    <home-career></home-career>
    <home-imm></home-imm>
    <home-comm></home-comm>

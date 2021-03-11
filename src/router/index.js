@@ -8,6 +8,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Landing.vue')
   },
   {
+    path: '/community',
+    name: 'Community',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Comm.vue')
+  },
+  {
     path: '/admin',
     name: 'admin',
     component: Home
@@ -16,6 +21,11 @@ const routes = [
     path: '/career-hub',
     name: 'Career Hub',
     component: () => import(/* webpackChunkName: "about" */ '../views/CareerHub.vue')
+  },
+  {
+    path: '/careerbot',
+    name: 'Career Bot',
+    component: () => import(/* webpackChunkName: "about" */ '../components/Cards/CareerHub/CareerBot.vue')
   },
   {
     path: '/immigration-hub',

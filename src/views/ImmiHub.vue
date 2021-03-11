@@ -1,5 +1,6 @@
 <template>
    <div>
+       <home-navbar></home-navbar>
         <!-- Deadline -->
         <div class="relative pt-1 mx-5 border shadow-md rounded-xl lg:mx-32 lg:mt-14 lg:py-5 lg:px-8 ">
             <div class="flex mb-2 items-center justify-between ">
@@ -28,8 +29,9 @@
 
 <script>
 import CardQuiz from '../components/Cards/ImmiHub/CardQuiz.vue'
+import HomeNavbar from '../components/Navbar/HomeNavbar.vue'
 export default {
-  components: { CardQuiz },
+  components: { CardQuiz, HomeNavbar },
     
 }
 </script>

@@ -5,11 +5,11 @@
             <div class="flex flex-col lg:flex-row">
                     <div class="mb-2 lg:mb-0 lg:w-1/2 lg:pr-5">
                     <h2 class="font-sans text-3xl font-bold tracking-tight text-black sm:text-4xl sm:leading-none">
-                        Our Career Hub    
+                        Career Hub    
                     </h2>
                     </div>
                     <div class="lg:w-1/2">
-                    <p class="mb-4 text-md text-gray-700 font-normal ">
+                    <p class="mb-4 text-lg text-gray-700 font-normal ">
                         Our career hub is filled with part and full time job opportunities with innovative companies who are actually excited to work with talented international students like <span class="inline-block font-semibold text-teal-accent-400">YOU.</span> <br>
                         Tailored to your career goals.
                     </p>
@@ -33,12 +33,14 @@
                         </p>
                     </div>
                     <div class="flex items-center">
-                        <button
-                        type="submit"
-                        class="inline-flex items-center justify-center h-10 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
-                        >
-                        Get started
-                        </button>
+                        <router-link to="/careerbot">
+                            <button
+                            type="submit"
+                            class="inline-flex items-center justify-center h-10 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
+                            >
+                            Get started
+                            </button>
+                        </router-link>
                     </div>
                 </div>
                 <div class="pl-5 flex flex-col justify-between lg:p-4 sm:p-10 lg:w-1/2">
@@ -54,12 +56,14 @@
                     </p>
                 </div>
                 <div class="flex items-center">
+                       <router-link to="/career-hub">
                         <button
                         type="submit"
                         class="inline-flex items-center justify-center h-10 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
                         >
                         Get started
                         </button>
+                       </router-link>
                     </div>
                 </div>
             </div>

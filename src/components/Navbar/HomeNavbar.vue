@@ -20,18 +20,18 @@
               aria-label="Immigration Hub"
               title="Our product"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-              >Immigration Hub</a
-            >
+              >Immigration Hub</a>
              </router-link>
           </li>
           <li>
+            <router-link to="/community" >
             <a
-              href="/"
               aria-label="Community"
               title="Community"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Community</a
             >
+            </router-link>
           </li>
         </ul>
         <!-- Logo -->
@@ -65,7 +65,7 @@
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
           <li>
             <a
-              href="/"
+              href="/admin"
               aria-label="Sign in"
               title="Sign in"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"

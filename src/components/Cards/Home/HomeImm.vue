@@ -22,7 +22,7 @@
             </p>
           </div>
           <router-link to="/immigration-hub">
-          <a aria-label="" class="inline-flex items-center font-semibold transition-colors lg:text-xl duration-200 text-teal-accent-700 hover:underline">
+          <a aria-label="" class="inline-flex lg:px-10 lg:py-3 rounded-lg items-center font-semibold transition-colors lg:text-xl duration-200 text-gray-100 bg-teal-400 ">
             Check It Out
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
               <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>

@@ -3,49 +3,85 @@
 		<div  class="container mx-auto grid grid-cols-12">
 			<div id="back" class="flex flex-col justify-center col-span-12 align-middle bg-gray-700 bg-no-repeat  lg:col-span-6 lg:h-auto" 
             :style="
-            {'background-image': 'url(' + worried + ')', 'background-position': 'center', 'background-size': 'cover'}
+            {'background-image': 'url(' + dream + ')', 'background-position': 'center', 'background-size': 'cover'}
             ">
 			</div>
 			<div class="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-coolGray-300">
 				<div class="pt-1 pb-4 space-y-2">
-					<p>Hi <strong> Tunde.</strong> </p>
-                    <p>You're not alone in the hustle to succeed. There are millions of international students like you worried over their future too.</p>
+					<p>Hi <strong> Tunde.</strong> Your Career Bot Here!  </p>
+                    <!-- <p>You're not alone in the hustle to succeed. There are millions of international students like you worried over their future too.</p> -->
 
-                    <p>We understand how stressful post-study options can be which is why we created this bot to guide you towards likely options</p>
+                    <p>I understand how stressful sieving through hundreds of job opportunities to find the right one. Please answer the questions below  
+                        so I can guide you towards our curated opportunities.</p>
+                    <p>I'm excited to help you find your next job. Let's get started.</p>
 				</div>
 				<div class="pt-6 pb-4 space-y-2">
 					<div class="mt-4">
 
-                        <span class="text-gray-700">How worried are you about your after-studies immigration future?</span>                
+                        <span class="text-gray-700">For what visa category are you looking for a job? </span>                
                         <div class="mt-2">
                             <label class="inline-flex items-center">
-                                <input type="radio" class="form-radio text-green-500" name="1" value="1" v-model="picked" />
-                                <span class="ml-2">1</span>
+                                <input type="radio" class="form-radio text-green-500" name="OPT" value="OPT" v-model="pickedVisa" />
+                                <span class="ml-2">OPT</span>
                             </label>
                             <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio" name="2" value="2" v-model="picked" />
-                            <span class="ml-2">2</span>
+                            <input type="radio" class="form-radio" name="Tier 2" value="Tier 2" v-model="pickedVisa" />
+                            <span class="ml-2">Tier 2</span>
                             </label>
-                            <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio" name="3" value="3" v-model="picked" />
-                            <span class="ml-2">3</span>
+                            <label class="inline-flex items-center ml-4">
+                            <input type="radio" class="form-radio" name="Internship" value="Internship" v-model="pickedVisa" />
+                            <span class="ml-2">Internship</span>
                             </label>
-                            <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio" name="4 " value="4" v-model="picked" />
-                            <span class="ml-2">4</span>
+                            <label class="inline-flex items-center ml-4">
+                            <input type="radio" class="form-radio" name="PGWP" value="PGWP" v-model="pickedVisa" />
+                            <span class="ml-2">PGWP</span>
                             </label>
-                            <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio text-red-800 " name="5" value="5" v-model="picked" />
-                            <span class="ml-2">5</span>
+                            <label class="inline-flex items-center ml-4">
+                            <input type="radio" class="form-radio text-red-800 " name="H1b" value="H1b" v-model="pickedVisa" />
+                            <span class="ml-2">H1b</span>
                             </label>
 
-                            <!-- <span class="mt-5 block">Picked: {{ picked }}</span> -->
+                            <span class="mt-5 block">Picked: {{ pickedVisa }}</span>
                         </div>
                         <button @click="change()" v-if="display" class="underline bg-teal-accent-400 mt-5" >
                             Next
                         </button>
 
-                    <transition name="fade" class="lg:mt-8">
+
+                        <transition name="fade" class="lg:mt-8">
+                        <div v-if="show" class="mt-2">
+                            <span class="text-gray-700 mr-6">
+                                Part-time or Full Time?
+                            </span>
+                            <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="Part-Time" value="Part-Time" v-model="openTime" />
+                            <span class="ml-2">Part-Time</span>
+                            </label>
+                            <label class="inline-flex items-center ml-6">
+                            <input type="radio" class="form-radio" name="Full-Time" value="Full-Time" v-model="openTime" />
+                            <span class="ml-2">Full-Time</span>
+                            
+                            </label>
+
+                            <span class="my-6 block">Selected: {{ openTime }}</span>
+
+                            
+                            <!-- <button @click="change2()" v-if="display2" class="underline bg-teal-accent-400 mt-5 ">
+                            Next
+                            </button> -->
+                            <router-link to="/career-hub">
+                                <button
+                                type="submit" v-if="submitted" 
+                                class="mt-8 inline-flex items-center justify-center h-12 lg:px-52 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
+                                >Submit</button>
+                            </router-link>
+
+                        </div>
+
+                        
+                    </transition>  
+
+                    <!-- <transition name="fade" class="lg:mt-8">
                         <div>
                             <label v-if="show" class="block mt-4">
                             <span class="text-gray-700">Which country are you currently studying?</span>
@@ -55,50 +91,44 @@
                                 {{ option.text }} 
                                 </option>
                             </select>
-                            <!-- <span class="mt-6 block">Selected: {{ selected }}</span> -->
+                            <span class="mt-6 block">Selected: {{ selected }}</span>
                         </label>
                         <button @click="change2()" v-if="display2" class="underline bg-teal-accent-400 mt-5 ">
                             Next
                         </button>
                         </div>
-                    </transition>
+                    </transition> -->
 
 
-                    <transition name="fade" class="lg:mt-8">
+                    <!-- <transition name="fade" class="lg:mt-8">
                         <div v-if="show2" class="mt-2">
-                            <span class="text-gray-700 mr-6">Are you open to exploring other wonderful countries with great work and immigration options after your studies?</span>
+                            <span class="text-gray-700 mr-6">
+                                Part-time or Full Time?
+                            </span>
                             <label class="inline-flex items-center">
-                            <input type="radio" class="form-radio" name="Yes" value="Yes" v-model="open" />
-                            <span class="ml-2">Yes</span>
+                            <input type="radio" class="form-radio" name="Part-Time" value="Part-Time" v-model="openTime" />
+                            <span class="ml-2">Part-Time</span>
                             </label>
                             <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio" name="No" value="No" v-model="open" />
-                            <span class="ml-2">No</span>
+                            <input type="radio" class="form-radio" name="Full-Time" value="Full-Time" v-model="openTime" />
+                            <span class="ml-2">Full-Time</span>
                             </label>
 
-                            <!-- <span class="mt-6 block">Selected: {{ open }}</span> -->
+                            <span class="mt-6 block">Selected: {{ openTime }}</span>
                         </div>
-                    </transition>  
+                    </transition>   -->
 
                     </div>
 
 				</div>
 
-                <button  v-scroll-to="{ 
-                    el: '#cardopp',
-                    easing: [.6, .80, .30, 1.9],
-                    duration: 2000 
-                }"
-                type="submit" v-if="submitted" @click="openOpportunities()"
-                class="mt-8 inline-flex items-center justify-center h-12 px-5 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
-                >Submit</button>
-
+                
 			</div>
 		</div>
 
         <!-- Card -->
 
-        <div v-if="opportunities" id="cardopp" class="mt-5 bg-gray-100 lg:px-20 py-2 ">
+        <!-- <div v-if="opportunities" id="cardopp" class="mt-5 bg-gray-100 lg:px-20 py-2 ">
             <h1 class=" text-teal-accent-400 font-bold my-6 ">Recommended Paths For You</h1>
             <ul>
                 <div v-if="
@@ -170,19 +200,19 @@
             who have navigated such path successfully. </p>
             
 
-        </div>
+        </div> -->
       
 	</div>
 </template>
 
 <script>
-import worried from "@/assets/images/worried.jpeg"
+import dream from "@/assets/images/dream-job.jpeg"
 export default {
     data() {
         return {
-            worried,
-            picked: '',
-            open: '',
+            dream,
+            pickedVisa: '',
+            openTime: '',
             opportunities: false,
             submitted: false,
             show: false,
@@ -205,7 +235,8 @@ export default {
         change() {
             this.show = !this.show,
             this.display = false
-            this.display2 = true
+            this.display2 = true,
+            this.submitted = true
             
         },
         change2() {

@@ -10,7 +10,7 @@
         <div class="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
           <div>
             <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              SHARED GOALS  |  EXCLUSIVE
+                COMING SOON
             </p>
           </div>
           <h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
@@ -20,12 +20,12 @@
             <span class="font-bold">With The Guide</span>, you join a goal-driven, country-specific community of like-minds. Together, we navigate the common hurdles international students face. We learn, grow and prosper together. 
           </p>
           <div class="flex items-center">
-            <button
+            <!-- <button
               type="submit"
               class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-green-500 focus:shadow-outline focus:outline-none"
             >
               JOIN TODAY
-            </button>
+            </button> -->
             <!-- <div class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
              <div v-scroll-to="{ element: '#home-scroll', duration: 1000  }" class="text-black text-4xl cursor-pointer" >Scroll</div>
             </div> -->

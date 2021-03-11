@@ -42,17 +42,17 @@
             </router-link>
           </li>
          
-          <li class="flex items-center ml-5">
+          <!-- <li class="flex items-center ml-5">
             <router-link to="/login" >
               <button
               class="bg-green-600 text-white active:bg-green-600 text-xs font-bold uppercase px-5 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
               type="button"
             >
-              <i class="fas fa-sign-in-alt"></i> Login
+              <i class="fas fa-sign-in-alt"></i> Login 
             </button>
             </router-link>
             
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <home-navbar></home-navbar>
         <!-- Welcome , User -->
         <card-stats></card-stats>
         <!-- Deadline -->
@@ -28,7 +29,7 @@
         <card-company></card-company>
         <!-- <card-carousel></card-carousel> -->
             <!-- Featured jobs -->  <!-- Filters -->
-        <job-main></job-main>
+        <job-main id="featuredjobs" ></job-main>
         
     </div>    
 
@@ -40,10 +41,13 @@ import CardCategory from '../components/Cards/CareerHub/CardCategory.vue'
 import CardCompany from '../components/Cards/CareerHub/CardCompany.vue'
 import CardStats from '../components/Cards/CareerHub/CardStats.vue'
 import JobMain from '../components/Cards/CareerHub/Job/JobMain.vue'
+import HomeNavbar from '../components/Navbar/HomeNavbar'
 
 
 
 export default {
-  components: { CardCategory, CardCompany, CardStats, JobMain, CardCarousel,}
+  components: {
+    CardCategory, CardCompany, CardStats, JobMain, CardCarousel, HomeNavbar
+  }
 }
 </script>

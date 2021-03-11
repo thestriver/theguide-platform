@@ -1,6 +1,6 @@
 <template>
    <div class="lg:mb-20">
-      <splitpanes style="min-height: 400px" class="default-theme"  >
+      <splitpanes style="min-height: 400px" class="default-theme" id="featuredjobs">
             <pane class="" min-size="75" max-size="100" >
                <button @click="hidePane2 = !hidePane2" class="bg-teal-accent-400 px-5 mx-16 mt-10 lg:mb-5" >{{ hidePane2 ? 'Show' : 'Hide' }} Filters</button>
         
