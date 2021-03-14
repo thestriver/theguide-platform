@@ -4,7 +4,7 @@
       <path fill="currentColor" d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"></path>
     </svg>
     <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+      <!-- <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
         <div class="md:max-w-md lg:col-span-2 text-left">
           <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
             <svg class="w-8 text-teal-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
@@ -80,12 +80,12 @@
               <li>
                 <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Nonprofit</a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educational</a>
               </li>
               <li>
                 <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Projects</a>
-              </li> -->
+              </li>
             </ul>
           </div>
           <div>
@@ -108,10 +108,10 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="flex flex-col justify-between pt-5 pb-10 border-t border-teal-accent-600 sm:flex-row">
+      </div> -->
+      <div class="flex flex-col justify-between pt-5 pb-10 border-t border-teal-accent-400 sm:flex-row">
         <p class="text-sm text-gray-100">
-          © Copyright 2021 Lorem Inc. All rights reserved.
+          © Copyright 2021 The Guide. All rights reserved.
         </p>
         <div class="flex items-center mt-4 space-x-4 sm:mt-0">
           <a href="/" class="transition-colors duration-300 text-teal-accent-400 hover:text-teal-accent-400">

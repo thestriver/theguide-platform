@@ -1,5 +1,6 @@
 <template>
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-12 lg:py-5">
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 cursor-pointer
+   lg:px-12 lg:py-5">
     <div class="max-w-xl mb-10 md:mx-1 sm:text-center lg:max-w-2xl md:mb-5 ">
       <!-- <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-left text-gray-900 sm:text-4xl md:mx-auto">
         <span class="relative inline-block">

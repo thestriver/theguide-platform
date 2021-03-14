@@ -1,61 +1,10 @@
 <template>
    <div class="lg:mb-20">
-      <splitpanes style="min-height: 400px" class="default-theme" id="featuredjobs">
-            <pane class="" min-size="75" max-size="100" >
-               <button @click="hidePane2 = !hidePane2" class="bg-teal-accent-400 px-5 mx-16 mt-10 lg:mb-5" >{{ hidePane2 ? 'Show' : 'Hide' }} Filters</button>
-        
-                <!-- <job-item></job-item> -->
-                  <div class="relative pt-1 lg:mb-20 mx-5 border lg:mx-1 lg:mt-6 lg:py-2 ">
-                    <div class="mb-40">
-                      <div  v-for="job in filteredRows" v-bind:key="job.id" class="max-w-full mx-10 mb-10 bg-white rounded-3xl flex">
-
-                          <div class="flex lg:w-6/12 py-5">
-
-                              <div class="ml-6 mr-5">
-                                  <img class="h-24 w-24 rounded-full" :src=job.logo alt="" />
-                              </div>
-
-                              <div class="ml-5">
-                                  <div class="text-lg inline-flex leading-8 font-bold text-teal-accent-400 pr-3">{{job.company}}</div>
-                                  <!-- <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-accent-400 text-green-800 mr-2">NEW</span>
-                                  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-black text-white">FEATURED</span> -->
-                                  
-                                  <!-- Job Title -->
-                                  <div class="text-gray-900 text-xl">{{job.title}}</div>
-                                  <!-- Deadline -->
-                                  <span class="text-gray-600 text-sm font-light mr-2">{{job.deadline}}</span>
-                                  <span class="text-gray-600 font-light mr-2">.</span>
-                                  
-                                  <!-- Contract Type -  -->
-                                  <span class="text-gray-600 text-sm font-light mr-2">{{job.contract}}</span>
-                                  <span class="text-gray-600 font-light mr-2">.</span>
-                                  
-                                  <!-- Location -->
-                                  <span class="text-gray-600 text-sm font-light mr-2">{{job.location}}</span>
-                              </div>
-                          </div>
-
-                          <div class="lg:w-6/12 mt-10">
-                              <!-- Industry/Profession type -->
-                              <span class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">
-                                  {{job.Industry}}
-                                  </span>
-                              <!-- Position -->
-                              <span class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.Visa}}</span>
-                              
-                              <!-- Visa Type -->
-                              <!-- <span key="" class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">OPT</span> -->
-                              <span key="" class="px-4 py-2 mr-4 mt-2 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.STEM}}</span>
-                              
-                          </div>
-                          
-                      </div>
-                      </div>
-                  </div>
-   
-            </pane>
-            <pane class="" min-size="25" max-size="25" v-if="!hidePane2" >
-                <div class="relative flex w-full flex-wrap items-stretch bg-gray-100 mx-auto my-10  py-3 border-2 ">
+     <!-- <button @click="hidePane2 = !hidePane2" class="bg-teal-accent-400 px-5 mx-16 mt-10 lg:mb-5" >{{ hidePane2 ? 'Show' : 'Hide' }} Filters</button>
+         -->
+      <splitpanes horizontal :first-splitter="firstSplitter" style="min-height: 400px" class="default-theme" id="featuredjobs">
+          <pane class="lg:px-20" min-size="25" max-size="25" v-if="!hidePane2"  >
+                <div class="relative flex w-full flex-wrap items-stretch  bg-gray-100 mx-auto my-3  border-2 ">
                   <span
                     class="z-10 h-full leading-snug font-normal text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
                   >
@@ -72,6 +21,73 @@
                   
                   
             </pane>
+            <pane class="" min-size="75" max-size="100" >
+               
+                <!-- <job-item></job-item> -->
+                  <div class="relative pt-1 lg:mb-20 mx-2 border lg:mx-1 lg:mt-6 lg:py-2 ">
+                    <div class="">
+                      <div  v-for="job in filteredRows" v-bind:key="job.id" class="max-w-full lg:mx-10 mb-4 bg-white rounded-3xl flex">
+
+                          <div class="flex lg:w-6/12 py-5" v-if="job.open"  >
+
+                              <div class="ml-6 mr-5">
+                                  <img class="lg:h-20 lg:w-20 w-12 h-8 rounded-full" :src=job.logo alt="" />
+                              </div>
+
+                              <div class="ml-5">
+                                  <div class="text-lg inline-flex leading-8 font-bold text-teal-accent-400 pr-3">{{job.company}}</div>
+                                  <!-- <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-accent-400 text-green-800 mr-2">NEW</span>
+                                  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-black text-white">FEATURED</span> -->
+                                  
+                                  <!-- Job Title -->
+                                  <div class="text-gray-900 text-xl">{{job.title}}</div>
+                                  <!-- Deadline -->
+                                  <span class="text-gray-600 text-sm font-light lg:mr-2 mr-1 ">{{job.deadline}}</span>
+                                  <span class="text-gray-600 font-light lg:mr-2">.</span>
+                                  
+                                  <!-- Contract Type -  -->
+                                  <span class="text-gray-600 text-sm font-light mr-2">{{job.contract}}</span>
+                                  <span class="text-gray-600 font-light lg:mr-2">.</span>
+                                  
+                                  <!-- Location -->
+                                  <span class="text-gray-600 text-sm font-light mr-2">{{job.location}}</span>
+                              </div>
+                          </div>
+
+                          <div class="lg:w-5/12 mt-10 ml-5" v-if="job.open"  >
+                              <!-- Industry/Profession type -->
+                              <span class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">
+                                  {{job.Industry}}
+                                  </span>
+                              <!-- Position -->
+                              <span class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.Visa}}</span>
+                              
+                              <!-- Visa Type -->
+                              <!-- <span key="" class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">OPT</span> -->
+                              <span key="" class="px-4 py-2 mr-4 mt-2 inline-flex text-base leading-5 font-semibold rounded-md bg-teal-accent-400 text-teal-500">{{job.STEM}}</span>
+                              
+                              <!-- apply -->
+                               <a :href=job.apply  target="_blank" class="lg:hidden mt-2 px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-gray-900 text-white">
+                                  Apply
+                                   <i class=" pl-3 fas fa-sm fa-external-link-alt"></i>
+                              </a>
+                              
+                          </div>
+
+                          <div v-if="job.open" class="lg:w-1/12 ml-5 lg:mx-3 mt-12 hidden lg:block ">
+                              
+                               <a :href=job.apply  target="_blank" class="px-4 py-2 mr-4 inline-flex text-base leading-5 font-semibold rounded-md bg-gray-900 text-white">
+                                  Apply
+                                   <i class="pl-3 pt-1 fas fa-sm fa-external-link-alt"></i>
+                                  </a>
+                          </div>
+                          
+                      </div>
+                      </div>
+                  </div>
+   
+            </pane>
+          
         </splitpanes>
         <!-- <split-panes class="default-theme">
             <pane v-for="i in 3" :key="i">
@@ -95,7 +111,8 @@ export default {
     components: { Splitpanes, Pane, JobItem },
     data() {
         return{
-            hidePane2: true,
+            hidePane2: false,
+              firstSplitter: false,
             data,
             filter:'',
         }

@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "open": true,
     "company": "Amazon",
     "logo": "https://pbs.twimg.com/profile_images/949070360103698432/kXSiPeTk_400x400.jpg",
     "title": "Associate Technical Account Manager",
@@ -10,10 +11,12 @@
     "Industry": "Sales and Advertising",
     "Visa": "PGWP",
     "STEM": "STEM",
-    "details": ""
+    "apply": "https://www.amazon.jobs/en/jobs/1460991/associate-technical-account-manager-tech-u-summer-2021",
+    "details": "Roles and Responsibilities: \n .Build a strong foundation of knowledge around AWS cloud services and the cloud ecosystem· \n Work with customers of all sizes to execute on the Enterprise Support value proposition of AWS \n · Assist with operational support needs for customers already using AWS \n· Collaborate with experienced technical account managers to craft and share best-practice knowledge amongst the AWS communities \n · Act as a technical liaison between customers, service engineering teams and support \n · Effectively represent AWS within a customer’s environment, and drive discussions regarding incidents, trade-offs and risk management. The TAM is the centerpiece of value to our Enterprise Support customers. If you wish to be at the forefront of innovation, come join us!"
   },
   {
     "id": 2,
+    "open": false,
     "company": "The Economist",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/The_Economist_Logo.svg/1200px-The_Economist_Logo.svg.png",
     "title": "Policy and Thought Leadership",
@@ -27,6 +30,7 @@
   },
   {
     "id": 3,
+    "open": true,
     "company": "Amazon",
     "logo": "https://pbs.twimg.com/profile_images/949070360103698432/kXSiPeTk_400x400.jpg",
     "title": "Front End Engineer Intern (SEA)",
@@ -36,10 +40,12 @@
     "Industry": "Information Technology",
     "Visa": "Internship",
     "STEM": "STEM",
+    "apply": "https://www.amazon.jobs/en/jobs/1448862/2021-front-end-engineer-intern-sea",
     "details": ""
   },
   {
     "id": 4,
+    "open": false,
     "company": "Salesforce",
     "logo": "https://www.salesforce.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg",
     "title": "Public Relations Intern",
@@ -54,19 +60,22 @@
   {
     "id": 5,
     "company": "Accenture",
+    "open": true,
     "logo": "https://www.accenture.com/t20180820T080700Z__w__/gb-en/_acnmedia/Accenture/Dev/Redesign/Acc_Logo_Black_Purple_RGB.png",
     "title": "Client Delivery Graduate Programme 2021",
-    "deadline": "12th March 2021",
+    "deadline": " 9th April 2021",
     "contract": "Full Time",
     "location": "London, U.K",
     "Industry": "Business",
     "Visa": "Tier 2",
     "STEM": "STEM",
+    "apply": "https://www.accenture.com/gb-en/careers/jobdetails?id=00933304_en-GB",
     "details": ""
   },
   {
     "id": 6,
     "company": "NHS Scotland",
+    "open": true,
     "logo": "https://www.scot.nhs.uk/wp-content/uploads/2020/08/logo-2-680x330.png",
     "title": "Clerical Officer",
     "deadline": "19 March 21",
@@ -79,6 +88,7 @@
   },
   {
     "id": 7,
+    "open": true,
     "company": "KGS Technology Group, Inc",
     "logo": "https://kgstechgroup.com/wp-content/uploads/2017/12/logokgc.png",
     "title": "Junior Java Developer",
@@ -92,6 +102,7 @@
   },
   {
     "id": 8,
+    "open": true,
     "company": "Ellucian",
     "logo": "https://www.ellucian.com/themes/custom/elluciantheme/logo.svg",
     "title": "R&D Intern",
@@ -101,10 +112,12 @@
     "Industry": "Education",
     "Visa": "OPT",
     "STEM": "Non-STEM",
+    "apply": "https://careers.ellucian.com/us/en/job/2790",
     "details": ""
   },
   {
     "id": 9,
+    "open": true,
     "company": "American Tower ",
     "logo": "https://www.americantower.com/Assets/beta.americantower.com/templates/header/american-tower-corporate-logo.png",
     "title": "Data Analyst",
@@ -114,10 +127,12 @@
     "Industry": "Engineering",
     "Visa": "OPT",
     "STEM": "STEM",
+    "apply": "https://careers.americantower.com/jobdetails/ATC_EXT/2100003D",
     "details": ""
   },
   {
     "id": 10,
+    "open": true,
     "company": "Country Court Care",
     "logo": "https://www.countrycourtcare.co/assets/img/footer-logo.jpg",
     "title": "Registered General Nurse (RGN)",
@@ -127,10 +142,12 @@
     "Industry": "Healthcare",
     "Visa": "Tier 2",
     "STEM": "STEM",
+    "apply": "https://www.carehome.co.uk/jobs/job.cfm/id/96008240564",
     "details": ""
   },
   {
     "id": 11,
+    "open": true,
     "company": "ABI Research",
     "logo": "https://cdn.abiresearch.com/static/img/abi_research_logo_w_tagline_30th_ann.svg",
     "title": "Graduate Analyst",
@@ -140,10 +157,12 @@
     "Industry": "Consulting",
     "Visa": "Tier 2",
     "STEM": "STEM",
+    "apply": "https://abi-research.breezy.hr/p/7cdadb27f9c0-graduate-research-analyst-london",
     "details": ""
   },
   {
     "id": 12,
+    "open": true,
     "company": "ITsutra",
     "logo": "https://media.glassdoor.com/sql/2592845/itsutra-squarelogo-1585311096123.png",
     "title": "Operations Associate",
@@ -153,10 +172,12 @@
     "Industry": "Consulting",
     "Visa": "OPT",
     "STEM": "STEM",
+    "apply": "http://itsutra.com/careers_archive/operations-associate/" , 
     "details": ""
   },
   {
     "id": 13,
+    "open": true,
     "company": "CSL Software Solutions",
     "logo": "https://fifththird.cslusdata.com/staging/wp-content/uploads/2016/03/CSL-Logo-Small-300x225.png",
     "title": "Software/Database Developer",
@@ -166,10 +187,12 @@
     "Industry": "Information Technology",
     "Visa": "OPT",
     "STEM": "STEM",
+    "apply": "https://fifththird.cslusdata.com/staging/about-us/employment-opportunities/",
     "details": ""
   },
   {
     "id": 14,
+    "open": true,
     "company": "ADEX Medical Staffing",
     "logo": "https://pbs.twimg.com/profile_images/648182158/FB-Logo_400x400.jpg",
     "title": "Registered Nurse",
@@ -179,6 +202,7 @@
     "Industry": "Healthcare",
     "Visa": "H1-B",
     "STEM": "STEM",
+    "apply": "https://nursegreencardsponsor.com/?utm_source=ADEX-INT-NURSING",
     "details": ""
   }
 ]

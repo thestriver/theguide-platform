@@ -110,6 +110,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                           </svg>
                         </span>
+                        
+        
                         <h4 class="mb-2 text-2xl  font-bold font-heading">Community</h4>
                         <p class="text-gray-900 leading-loose">We provide an online community of like-minds helping international students get access to the specific support and resources they need </p>
                       </div>
@@ -137,7 +139,7 @@
           
         <div class="container mx-8">
           <div class="flex flex-wrap">
-            <div class="lg:w-1/2 w-5/6 md:w-1/2  order-1 md:order-0 lg:pl-16 ">
+            <div class="lg:w-1/2 w-5/6 md:w-1/2  order-1 md:order-0 lg:pl-16 lg:pt-10 ">
               <div class="lg:max-w-xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">During Your Studies</h2>
                 <p class="mb-3 leading-loose text-blueGray-400 text-justify">
@@ -145,11 +147,11 @@
                     <span class="text-green-600 font-bold"> Think of us as your personal guide. A secret weapon to advance your goals.</span>  <br>
                     Plus a rich community with like-minds and a suite of resources tailored to ease your navigation through your daunting time as an internation student
                 </p>
-                <ul class="pb-4">
-                    <!-- <li class="">
+                <!-- <ul class="pb-4">
+                    <li class="">
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">1</span>
                       <span> A Personal CMS - helping you track your academic and financial goals</span>
-                    </li> -->
+                    </li>
                     <li class="py-2">
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">1</span>
                       <span> A Career Hub tailored to your preferences. Filled with internships and job opportunities with partner companies who are excited to work with international students </span>
@@ -162,15 +164,17 @@
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">3</span>
                       <span> A Resources Hub &amp; lots more. </span>
                     </li>
-                  </ul>
+                  </ul> -->
                 
-                <div class="flex justify-start">
-                  <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
-                </div>
+                <router-link to="/admin">
+                  <div class="flex justify-start">
+                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
+                  </div>
+                </router-link>
               </div>
             </div>
-            <div class="w-5/6 md:w-1/2 px-3 lg:pl-20  order-0 md:order-1 mb-12 lg:pt-24 md:mb-0">
-              <img class="sm:max-w-sm lg:max-w-full mx-auto" :src="feature2" alt="" />
+            <div class="w-5/6 md:w-1/2 px-3 lg:pl-20  order-0 md:order-1 mb-12 lg:pt-1 md:mb-0">
+              <img class="sm:max-w-sm rounded-xl lg:max-w-full mx-auto" :src="feature2" alt="" />
             </div>
             
           </div>
@@ -181,19 +185,19 @@
       <section class="py-20">
         <div class="container">
           <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/2 px-10 order-0 lg:pl-24  pt-20 md:order-1 mb-12 md:mb-0">
-              <img class="sm:max-w-sm lg:max-w-full mx-auto" :src="feature1" alt="">
+            <div class="w-full md:w-1/2 px-10 order-0 lg:pl-24  md:order-1 mb-12 md:mb-0">
+              <img class="sm:max-w-sm rounded-xl lg:max-w-full mx-auto" :src="feature1" alt="">
             </div>
             <div class="w-full md:w-1/2 px-10 order-1 md:order-0 lg:pl-32">
               <div class="lg:max-w-2xl max-w-md ">
                 <h2 class="mb-4 text-3xl md:text-5xl text-green-600 font-bold font-heading">After Your Studies</h2>
                 <p class="mb-4 leading-loose text-blueGray-400 text-justify ">
-                    We know first hand how intense the months before and after your graduation are. We provide you with the best tools & resources to help you achieve your dreams. 
+                    We know how intense the months before and after your graduation are which is why we provide you with the best tools & resources to help you achieve your dreams. 
                  <br>   Matching you with highly-successful and well-tested career and immigration services. 
                     Partnerships with top companies who are excited to work with talented international students like you.
 
                 </p>
-                <ul class="mb-6">
+                <!-- <ul class="mb-6">
                     <li class="py-2">
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">1</span>
                       <span>Career Hub - A post-study career hub with a curated section for premium career services.</span>
@@ -208,15 +212,19 @@
                       <span class="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-200 text-green-600 rounded">3</span>
                       <span>Add-on services + Exclusive partnerships</span>
                     </li>
-                  </ul>
-                <div class="flex justify-start">
-                  <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
-              </div>
+                  </ul> -->
+                <router-link to="/admin">
+                  <div class="flex justify-start">
+                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
+                  </div>
+                </router-link>
               </div>
             </div>
             </div>
         </div>
     </section>
+
+
 
 
 <!-- CTA -->
@@ -229,10 +237,29 @@
     <div class="mt-8 flex lg:mt-8 lg:flex-shrink-0 lg:mr-24">
       <div class="flex pb-8 w-full md:justify-start items-end">
         <div class="">
-        <label for="hero-field" class="lg:leading-7 text-sm text-gray-600"></label>
-        <input type="text" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out">
+           <!-- <mailchimp-subscribe
+            url="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&id=7eb4c33354"
+            user-id="xxx"
+            list-id="xxx"
+            @error="onError"
+            @success="onSuccess"
+          >
+            <template v-slot="{ subscribe, setEmail,  success, loading }">
+              <form @submit.prevent="subscribe">
+                <input type="email" @input="setEmail($event.target.value)" />
+                <input @input="setEmail($event.target.value)" type="email" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out" />
+                <button type="submit">Submit</button>
+                <button type="submit" class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
+                <div v-if="error">{{ error }}</div>
+                <div v-if="success">Yay!</div>
+                <div v-if="loading">Loading…</div>
+              </form>
+            </template>
+          </mailchimp-subscribe> -->
+        <!-- <label for="hero-field" class="lg:leading-7 text-sm text-gray-600"></label> -->
+        <input @input="setEmail($event.target.value)" type="email" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out" />
         </div>
-        <button class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
+        <button type="submit" class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
     </div>
   </div>
 </div>
@@ -254,11 +281,14 @@ import greendarkup from "@/assets/images/elements/green-dark-up.svg"
 import winggreendown from "@/assets/images/elements/wing-green-down.svg"
 import grayright from "@/assets/images/elements/bullets-gray-right.svg"
 import grayleft from "@/assets/images/elements/bullets-gray-left.svg"
-import feature2 from "@/assets/images/feature_2.ae39d717.png"
-import feature1 from "@/assets/images/feature_1.4157543f.png"
+import feature2 from "@/assets/images/commstudents2.jpeg"
+import feature1 from "@/assets/images/commstudents.jpeg"
 import apphero  from "@/assets/images/app_hero_1.a66466a3.png"
 import HomeFooter from '../components/Footer/HomeFooter.vue';
 
+// import MailchimpSubscribe from 'vue-mailchimp-subscribe'
+
+const MailchimpSubscribe = require('vue-mailchimp-subscribe')
 
 
 
@@ -279,8 +309,19 @@ export default {
   components: {
     Footer,
     IndexNavbar,
-    HomeFooter
+    HomeFooter,
+    MailchimpSubscribe
 
+  },
+  methods: {
+    onError() {
+      // handle error
+      console.log('Nope!')
+    },
+    onSuccess() {
+      // handle success
+      console.log('Hi!')
+    },
   },
 };
 </script>

@@ -2,7 +2,7 @@
     <div>
         <home-navbar></home-navbar>
         <!-- Welcome , User -->
-        <card-stats></card-stats>
+        <!-- <card-stats></card-stats> -->
         <!-- Deadline -->
         <!-- <div class="relative pt-1 mx-5 border shadow-md rounded-xl lg:mx-32 lg:mt-14 lg:py-5 lg:px-8 ">
             <div class="flex mb-2 items-center justify-between ">

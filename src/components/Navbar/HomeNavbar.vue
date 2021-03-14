@@ -23,7 +23,7 @@
               >Immigration Hub</a>
              </router-link>
           </li>
-          <li>
+          <!-- <li>
             <router-link to="/community" >
             <a
               aria-label="Community"
@@ -32,7 +32,7 @@
               >Community</a
             >
             </router-link>
-          </li>
+          </li> -->
         </ul>
         <!-- Logo -->
         <a
@@ -173,7 +173,7 @@
                       >Immigration Hub</a
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a
                       href="/"
                       aria-label="Community"
@@ -181,7 +181,7 @@
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Community</a
                     >
-                  </li>
+                  </li> -->
                   <li>
                     <a
                       href="/"

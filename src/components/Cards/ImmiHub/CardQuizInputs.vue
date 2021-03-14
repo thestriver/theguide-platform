@@ -99,7 +99,7 @@
         <!-- Card -->
 
         <div v-if="opportunities" id="cardopp" class="mt-5 bg-gray-100 lg:px-20 py-2 ">
-            <h1 class=" text-teal-accent-400 font-bold my-6 ">Recommended Paths For You</h1>
+            <h1 class=" text-teal-accent-400 font-bold my-6 ">Exciting Paths You Can Explore</h1>
             <ul>
                 <div v-if="
                  selected === 'USA' && open === 'No' || selected === 'USA' && open === 'Yes' || selected === 'Canada' && open === 'Yes' 
@@ -166,7 +166,7 @@
                 </div>
             </ul>
 
-            <p class="lg:my-14">  <span class="bg-teal-accent-400  ">Coming Soon:</span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides on each Recommended path. Plus success stories from international students 
+            <p class="lg:my-14">  <span class="bg-teal-accent-400 px-2 py-1 rounded-full ">Coming Soon <br> </span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides on each Recommended path. Plus success stories from international students 
             who have navigated such path successfully. </p>
             
 
