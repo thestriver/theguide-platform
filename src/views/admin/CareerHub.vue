@@ -36,12 +36,12 @@
 </template>
 
 <script>
-import CardCarousel from '../components/Cards/CareerHub/CardCarousel.vue'
-import CardCategory from '../components/Cards/CareerHub/CardCategory.vue'
-import CardCompany from '../components/Cards/CareerHub/CardCompany.vue'
-import CardStats from '../components/Cards/CareerHub/CardStats.vue'
-import JobMain from '../components/Cards/CareerHub/Job/JobMain.vue'
-import HomeNavbar from '../components/Navbar/HomeNavbar'
+import CardCarousel from '../../components/Cards/CareerHub/CardCarousel.vue'
+import CardCategory from '../../components/Cards/CareerHub/CardCategory.vue'
+import CardCompany from '../../components/Cards/CareerHub/CardCompany.vue'
+import CardStats from '../../components/Cards/CareerHub/CardStats.vue'
+import JobMain from '../../components/Cards/CareerHub/Job/JobMain.vue'
+import HomeNavbar from '@/components/Navbar/HomeNavbar'
 
 
 

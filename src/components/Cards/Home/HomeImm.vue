@@ -21,7 +21,7 @@
                     </span>
             </p>
           </div>
-          <router-link to="/immigration-hub">
+          <router-link to="/admin/immigration-hub">
           <a aria-label="" class="inline-flex lg:px-10 lg:py-3 rounded-lg items-center font-semibold transition-colors lg:text-xl duration-200 text-gray-100 bg-teal-400 ">
             Check It Out
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-  </template>
+</template>
 
 <script>
 export default {

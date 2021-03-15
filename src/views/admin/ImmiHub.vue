@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import CardQuiz from '../components/Cards/ImmiHub/CardQuiz.vue'
-import HomeNavbar from '../components/Navbar/HomeNavbar.vue'
+import CardQuiz from '../../components/Cards/ImmiHub/CardQuiz.vue'
+import HomeNavbar from '../../components/Navbar/HomeNavbar.vue'
 export default {
   components: { CardQuiz, HomeNavbar },
     

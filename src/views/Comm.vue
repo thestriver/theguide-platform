@@ -10,7 +10,7 @@
 				<p class="text-2xl font-semibold md:text-6xl text-coolGray-600">Coming Soon.</p>
 				<p class="mt-4 mb-8">We're working had to ensure you have a great time with our community when we launch.</p>
 
-                <router-link to="/admin">
+                <router-link to="/">
 				<a  class="px-8 py-3 font-semibold rounded bg-teal-accent-700 text-gray-50">Back to homepage</a>
                 </router-link>
 			</div>

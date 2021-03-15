@@ -23,8 +23,8 @@
                         </p>
                         <div class="flex pb-8 w-full md:justify-start justify-center items-end">
                             <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
-                            <label for="hero-field" class="leading-7 text-sm text-gray-600"></label>
-                            <input type="text" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-900 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out">
+                            <label for="hero-field2" class="leading-7 text-sm text-gray-600"></label>
+                            <input type="text" id="hero-field2" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-900 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
                             <button class="inline-flex text-white bg-green-500 border-0 py-3 px-3 lg:py-3 lg:px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</button>
                         </div>

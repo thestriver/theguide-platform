@@ -6,19 +6,19 @@
       <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <router-link to="/career-hub" >
+            <router-link to="/admin/career-hub" >
               <a
               aria-label="Our product"
-              title="Our product"
+              title="Career Hub"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Career Hub</a>
             </router-link>
           </li>
           <li>
-             <router-link to="/immigration-hub" >
+             <router-link to="/admin/immigration-hub" >
             <a
               aria-label="Immigration Hub"
-              title="Our product"
+              title="Immigration Hub"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Immigration Hub</a>
              </router-link>
@@ -66,18 +66,17 @@
           <li>
             <a
               href="/admin"
-              aria-label="Sign in"
-              title="Sign in"
+              aria-label="Admin"
+              title="Admin"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >Home</a
             >
           </li>
           <li>
-            <a
-              href="/"
-              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
+            <a @click="logout()"
+              class="inline-flex cursor-pointer items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
+              aria-label="Log Out"
+              title="Log Out"
             >
               Log out
             </a>
@@ -111,7 +110,7 @@
               <div class="flex items-center justify-between mb-4">
                 <div>
                   <a
-                    href="/"
+                    href="/admin"
                     aria-label="Company"
                     title="Company"
                     class="inline-flex items-center"
@@ -157,7 +156,7 @@
                 <ul class="space-y-4">
                   <li>
                     <a
-                      href="/career-hub"
+                      href="/admin/career-hub"
                       aria-label="Career Hub"
                       title="Career Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -166,7 +165,7 @@
                   </li>
                   <li>
                     <a
-                      href="/immigration-hub"
+                      href="/admin/immigration-hub"
                       aria-label="Immigration Hub"
                       title="Immigration Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -185,15 +184,14 @@
                   <li>
                     <a
                       href="/"
-                      aria-label="Sign in"
-                      title="Sign in"
+                      aria-label="Home"
+                      title="Home"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Home</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/"
                       class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-accent-400 focus:shadow-outline focus:outline-none"
                       aria-label="Sign up"
                       title="Sign up"
@@ -215,12 +213,16 @@
 // import logo from '@/assets/images/Logo(2).png'
 
 export default {
-name: 'HommeNavBar',
   data() {
     return {
       isMenuOpen: false,
     //   logo
     };
   },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+    }
+  }
 };
 </script>
