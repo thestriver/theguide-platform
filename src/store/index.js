@@ -20,6 +20,8 @@ const store = createStore({
     
         // fetch user profile and set in state
         dispatch('fetchUserProfile', user)
+
+        router.push('/admin')
       },
       async fetchUserProfile({ commit }, user) {
         // fetch user profile
@@ -32,9 +34,13 @@ const store = createStore({
         // router.push('/admin')
         //below replaces above
         // //ensuring when a user reloads on /settings for example it doesnt take them dashboard i.e '/'
-        if (router.currentRoute.path === '/login') {
-          router.push('/admin')
-        }
+        // if (router.currentRoute.path === '/login') {
+        //   router.push(router.currentRoute.path)
+        // }
+        // if(this.$route === '/login'){
+        //   router.push('/admin')
+        // }
+        
       },
        // SiGNUP
       async signup({ dispatch }, form) {
@@ -47,8 +53,10 @@ const store = createStore({
           title: form.title
         })
       
-        //3. fetch user profile and set in state
+        //3. fetch user profile and set in state and triggers fetchuserProfile async function and push to admin
         dispatch('fetchUserProfile', user)
+
+        router.push('/admin')
       },
         // logout the user
       async logout({ commit }) {
@@ -57,6 +65,18 @@ const store = createStore({
         // clear userProfile and redirect to /login
         commit('setUserProfile', {})
         router.push('/login')
+      },
+      //update user name and title in settings
+      async updateProfile({ dispatch }, user) {
+        const userId = fb.auth.currentUser.uid
+        // update user object
+         // eslint-disable-next-line no-unused-vars
+        const userRef = await fb.usersCollection.doc(userId).update({
+          name: user.name,
+          title: user.title
+        })
+      
+        dispatch('fetchUserProfile', { uid: userId })
       }
   },
   modules: {

@@ -22,11 +22,21 @@
                             their career and immigration goals. 
                         </p>
                         <div class="flex pb-8 w-full md:justify-start justify-center items-end">
-                            <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
+                          <form action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                            <label for="mce-EMAIL"></label>
+                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-14 leading-8 transition-colors duration-200 ease-in-out" >
+                              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8860953b0b16ce89484143b0_7eb4c33354" tabindex="-1" value=""></div>
+                              <div class="clear">
+                            <input type="submit" value="Join our waiting list" name="subscribe" id="mc-embedded-subscribe" class="button inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg"></div>
+                              </div>
+                          </form>
+                            <!-- <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
                             <label for="hero-field2" class="leading-7 text-sm text-gray-600"></label>
                             <input type="text" id="hero-field2" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-900 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
-                            <button class="inline-flex text-white bg-green-500 border-0 py-3 px-3 lg:py-3 lg:px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</button>
+                            <button class="inline-flex text-white bg-green-500 border-0 py-3 px-3 lg:py-3 lg:px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</button> -->
                         </div>
                         <!-- <div>
                             <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>
@@ -59,7 +69,7 @@
                   <div class="w-5/6 lg:w-1/2 mb-12 lg:mb-0">
                     <div class="max-w-md lg:mx-auto -mt-10">
                       <span class="text-green-600 font-bold">A COMMUNITY-FIRST PLATFORM</span>
-                      <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">We Help You Navigate Your Way To <SPAN class="text-green-600">Success</SPAN></h2>
+                      <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">We Help You Navigate Your Way To <span class="text-green-600">Success</span></h2>
                       <div class="mb-6 pt-4 text-gray-900 leading-8 tracking-normal max-w-md lg:max-w-xl">
                         <p>There are over 5.5 million international students in the world  contributing $300bn to the global economy <b>(U.S.A - $45bn).</b></p>  
                         <p class="py-2">
@@ -168,7 +178,7 @@
                 
                 <router-link to="/admin">
                   <div class="flex justify-start">
-                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
+                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="/admin">Get Started</a>          
                   </div>
                 </router-link>
               </div>
@@ -215,7 +225,7 @@
                   </ul> -->
                 <router-link to="/admin">
                   <div class="flex justify-start">
-                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get Started</a>          
+                    <a class="inline-block mb-3 lg:mt-2 lg:mb-0 lg:mr-3 w-full lg:w-auto py-3 px-16 leading-loose bg-green-600 hover:bg-green-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="/admin">Get Started</a>          
                   </div>
                 </router-link>
               </div>
@@ -237,6 +247,17 @@
     <div class="mt-8 flex lg:mt-8 lg:flex-shrink-0 lg:mr-24">
       <div class="flex pb-8 w-full md:justify-start items-end">
         <div class="">
+          <form action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL"></label>
+            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out" >
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8860953b0b16ce89484143b0_7eb4c33354" tabindex="-1" value=""></div>
+              <div class="clear">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button  inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg"></div>
+              </div>
+          </form>
+
            <!-- <mailchimp-subscribe
             url="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&id=7eb4c33354"
             user-id="xxx"
@@ -257,12 +278,15 @@
             </template>
           </mailchimp-subscribe> -->
         <!-- <label for="hero-field" class="lg:leading-7 text-sm text-gray-600"></label> -->
-        <input @input="setEmail($event.target.value)" type="email" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out" />
+        <!-- <input @input="setEmail($event.target.value)" type="email" id="hero-field" placeholder="Join our waiting list" name="hero-field" class="w-full bg-gray-100  border-2 bg-opacity-50 border-green-600 focus:ring-2 focus:ring-green-200 focus:bg-transparent focus:border-green-500 text-base outline-none text-gray-900 py-3 px-24 leading-8 transition-colors duration-200 ease-in-out" /> -->
         </div>
-        <button type="submit" class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button>
+        <!-- <button type="submit" class="inline-flex text-white bg-green-600 border-0 py-4 px-2 lg:py-4 lg:px-6 focus:outline-none hover:bg-green-600 text-lg">Sign Up</button> -->
     </div>
   </div>
 </div>
+
+
+
 </div>
    
    <!-- Footer -->

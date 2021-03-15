@@ -73,6 +73,15 @@
             >
           </li>
           <li>
+            <a
+              href="/settings"
+              aria-label="Admin"
+              title="Setting"
+              class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >Settings</a
+            >
+          </li>
+          <li>
             <a @click="logout()"
               class="inline-flex cursor-pointer items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
               aria-label="Log Out"

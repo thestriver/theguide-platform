@@ -51,7 +51,7 @@
                 </label>
                 <input
                   type="email"
-                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  class="px-3 py-3 required placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Email"
                   v-model.trim="loginForm.email"
                 />
@@ -66,7 +66,7 @@
                 </label>
                 <input
                   type="password"
-                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  class="px-3 py-3 required placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Password"
                   v-model.trim="loginForm.password"
                 />
@@ -108,12 +108,12 @@
           </button> -->
           <div class="w-1/2">
             <a @click="togglePasswordReset()" class="text-gray-300">
-              <h7 class="hover:text-gray-600 text-md">Forgot password?</h7>
+              <h5 class="hover:text-gray-600 text-md">Forgot password?</h5>
             </a>
           </div>
           <div class="w-1/2 text-right cursor-pointer">
             <a @click="toggleForm()" class="text-gray-300">
-              <h7 class="hover:text-green-600 text-md " >Create new account</h7>
+              <h5 class="hover:text-green-600 text-md " >Create new account</h5>
             </a>
           </div>
           <div class="pt-6 w-full cursor-pointer text-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 ">
@@ -174,7 +174,7 @@
                 </label>
                 <input
                   type="email"
-                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  class="required px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Name"
                   v-model.trim="signupForm.name"
                 />
@@ -189,7 +189,7 @@
                 </label>
                 <input
                   type="email"
-                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  class="required px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Email"
                   v-model.trim="signupForm.email"
                 />
@@ -204,7 +204,7 @@
                 </label>
                 <input
                   type="password"
-                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  class="px-3 py-3 required placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Password"
                   v-model.trim="signupForm.password"
                 />

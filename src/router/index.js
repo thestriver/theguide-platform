@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/admin/Home.vue'
 import { auth } from '../firebase'
 
 const routes = [
@@ -11,16 +10,24 @@ const routes = [
   {
     path: '/community',
     name: 'Community',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Comm.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/Comm.vue')
   },
   {
     path: '/admin',
     name: 'admin',
-    component: Home,
+    // redirect: "/admin/dashboard", 
+    component: () => import(/* webpackChunkName: "about" */ '@/layouts/Home.vue'),
     meta: {
       requiresAuth: true
     },
     // children: [
+    //   {
+    //     path: "/admin/dashboard",
+    //     component: () => import(/* webpackChunkName: "" */ '@/views/admin/HomeAdmin.vue'),
+    //     meta: {
+    //       requiresAuth: true
+    //     }
+    //   },
     //   {
     //     path: "/admin/career-hub",
     //     name: 'Career Hub',
@@ -41,6 +48,14 @@ const routes = [
     //     path: "/admin/immigration-hub",
     //     name: 'Immigration Hub',
     //     component: () => import(/* webpackChunkName: "about" */ '@/views/admin/ImmiHub.vue'),
+    //     meta: {
+    //       requiresAuth: true
+    //     },
+    //   },
+    //   {
+    //     path: '/settings',
+    //     name: 'settings',
+    //     component: () => import(/* webpackChunkName: "settings" */ '../views/Settings.vue'),
     //     meta: {
     //       requiresAuth: true
     //     },
@@ -73,6 +88,14 @@ const routes = [
     },
   },
   {
+    path: '/settings',
+    name: 'settings',
+    component: () => import(/* webpackChunkName: "settings" */ '../views/Settings.vue'),
+    meta: {
+      requiresAuth: true
+    },
+ },
+{
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -84,11 +107,6 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "login" */ '../views/auth/Login.vue')
-  },
-  {
-    path: '/settings',
-    name: 'settings',
-    component: () => import(/* webpackChunkName: "settings" */ '../views/Settings.vue')
   }
 ]
 
