@@ -2,7 +2,7 @@
 	<section class="bg-coolGray-100 mt-12 text-coolGray-800">
     <index-navbar></index-navbar>
 
-		<div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+		<div class="container max-w-xl p-6 py-10 mx-auto space-y-10 lg:px-8 lg:max-w-7xl">
 			<div>
 				<h2 class="text-3xl font-bold tracking-tight text-left sm:text-5xl text-coolGray-900">Built by International Students</h2>
 				<p class="mx-auto mt-4 text-3xl text-left text-coolGray-600">

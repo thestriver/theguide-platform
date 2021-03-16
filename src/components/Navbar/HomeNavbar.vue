@@ -6,7 +6,7 @@
       <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <router-link to="/admin/career-hub" >
+            <router-link to="/admin/careerbot" >
               <a
               aria-label="Our product"
               title="Career Hub"

@@ -8,7 +8,7 @@
 			</div>
 			<div class="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-coolGray-300">
 				<div class="pt-1 pb-4 space-y-2">
-					<p>Hi <strong> Tunde.</strong> </p>
+					<p>Hi <strong> {{ userProfile.name }} </strong> </p>
                     <p>You're not alone in the hustle to succeed. There are millions of international students like you worried over their future too.</p>
 
                     <p>We understand how stressful post-study options can be which is why we created this bot to guide you towards likely options</p>
@@ -505,6 +505,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import worried from "@/assets/images/worried.jpeg"
 export default {
     data() {
@@ -546,7 +547,10 @@ export default {
             this.opportunities = true,
             this.showComponent = false
         }
-    }
+    },
+     computed: {
+    ...mapState(['userProfile'])
+  },
 
 }
 </script>

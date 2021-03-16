@@ -30,9 +30,9 @@
 		<div class="container flex flex-col justify-center p-4 mx-auto md:p-2">
 			<div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-coolGray-300">
 					
-                    <button @click="reveal()" class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
+                    <button @click="reveal()" v-scroll-to="{ element: '#immquiz', duration: 1000  }" class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
 
-                     <transition name="fade" class="lg:mt-8">
+                     <transition name="fade" id="immquiz" class="lg:mt-8">
                         <div v-show="show" class="px-4 pb-4">
                             <card-quiz-inputs></card-quiz-inputs>
                         </div>

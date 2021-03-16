@@ -2,7 +2,7 @@
    <div class="lg:mb-20">
      <!-- <button @click="hidePane2 = !hidePane2" class="bg-teal-accent-400 px-5 mx-16 mt-10 lg:mb-5" >{{ hidePane2 ? 'Show' : 'Hide' }} Filters</button>
          -->
-      <splitpanes horizontal :first-splitter="firstSplitter" style="min-height: 400px" class="default-theme" id="featuredjobs">
+      <splitpanes horizontal :first-splitter="firstSplitter" style="min-height: 400px" class="" id="featuredjobs">
           <pane class="lg:px-20" min-size="25" max-size="25" v-if="!hidePane2"  >
                 <!-- <h1 class="text-3xl text-black "> {{visaComp}} </h1> -->
                 <div class="relative flex w-full flex-wrap items-stretch  bg-gray-100 mx-auto my-3  border-2 ">
@@ -33,7 +33,7 @@
                           <div class="flex lg:w-6/12 py-5" v-if="job.open"  >
 
                               <div class="ml-6 mr-5">
-                                  <img class="lg:h-20 lg:w-20 w-12 h-8 rounded-full" :src=job.logo alt="" />
+                                  <img class="lg:h-16 lg:w-16 w-12 h-8 rounded" :src=job.logo alt="" />
                               </div>
 
                               <div class="ml-5">
