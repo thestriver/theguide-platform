@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-12 lg:-mt-2 lg:py-4">
+    <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-12 lg:mt-2 lg:py-4">
         <div class="max-w-xl mb-10 md:mx-1 sm:text-center lg:max-w-2xl lg:mb-3">
             <p class="text-base text-left font-semibold text-gray-700 md:text-lg">
             Featured Companies

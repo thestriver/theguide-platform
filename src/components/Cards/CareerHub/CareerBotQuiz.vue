@@ -8,7 +8,7 @@
 			</div>
 			<div class="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-coolGray-300">
 				<div class="pt-1 pb-4 space-y-2">
-					<p>Hi <strong> Tunde.</strong> Your Career Bot Here!  </p>
+					<p>Hi <strong> {{ userProfile.name }} . </strong> Your Career Bot Here!  </p>
                     <!-- <p>You're not alone in the hustle to succeed. There are millions of international students like you worried over their future too.</p> -->
 
                     <p>I understand how stressful sieving through hundreds of job opportunities to find the right one. Please answer the questions below  
@@ -69,12 +69,12 @@
                             <!-- <button @click="change2()" v-if="display2" class="underline bg-teal-accent-400 mt-5 ">
                             Next
                             </button> -->
-                            <router-link to="/career-hub">
-                                <button
+                            <!-- <router-link to="/admin/career-hub"> -->
+                                <button @click="visa()"
                                 type="submit" v-if="submitted" 
                                 class="mt-8 inline-flex items-center justify-center h-12 lg:px-52 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
                                 >Submit</button>
-                            </router-link>
+                            <!-- </router-link> -->
 
                         </div>
 
@@ -206,6 +206,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import dream from "@/assets/images/dream-job.jpeg"
 export default {
     data() {
@@ -247,8 +248,15 @@ export default {
         openOpportunities() {
             this.opportunities = true,
             this.showComponent = false
+        },
+        visa(){
+            this.$store.dispatch('visaFetch', this.pickedVisa)
+            this.$router.push('/admin/career-hub')
         }
-    }
+    },
+     computed: {
+    ...mapState(['userProfile'])
+  },
 
 }
 </script>

@@ -69,7 +69,7 @@
               aria-label="Admin"
               title="Admin"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-              >Home</a
+              >Admin</a
             >
           </li>
           <li>
@@ -78,7 +78,7 @@
               aria-label="Admin"
               title="Setting"
               class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-              >Settings</a
+              >Profile Settings</a
             >
           </li>
           <li>

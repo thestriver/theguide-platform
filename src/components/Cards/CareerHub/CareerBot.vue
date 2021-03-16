@@ -1,5 +1,6 @@
 <template>
     <section class="p-6 bg-coolGray-100 text-coolGray-800">
+        <card-category></card-category>
         <div class="container mx-auto lg:mt-10">
             <span class="block mb-2 text-lg font-medium tracking-widest text-center uppercase text-teal-accent-400">Career Bot</span>
             <h2 class="text-4xl font-bold text-center text-coolGray-900">Interacting With Our Career Bot is Easy</h2>
@@ -24,10 +25,10 @@
                 </div>
             </div> -->
             <section class="text-gray-900">
-                <div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+                <div class="container max-w-xl py-4 mx-auto space-y-10 lg:px-8 lg:max-w-7xl">
                     <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
-                            <div class="mt-12 space-y-12">
+                            <div class="mt-12 space-y-8">
                             <div class="flex">
                                 <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center w-12 h-12 rounded-md bg-teal-accent-400 text-gray-200">
@@ -78,12 +79,12 @@
     </section>
 
 	<section class="bg-coolGray-100 text-coolGray-800">
-		<div class="container flex flex-col justify-center p-4 mx-auto md:p-2">
+		<div class="container flex flex-col justify-center mx-auto ">
 			<div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-coolGray-300">
 					
-                    <button @click="reveal()" class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
+                    <button @click="reveal()" v-scroll-to="{ element: '#careerquiz', duration: 1000  }" class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
 
-                     <transition name="fade" class="lg:mt-8">
+                     <transition name="fade" id="careerquiz" class="lg:mt-8">
                         <div v-show="show" class="px-4 pb-4">
                             <career-bot-quiz></career-bot-quiz>
                         </div>
@@ -96,10 +97,12 @@
 </template>
 
 <script>
+
+import CardCategory from './CardCategory.vue'
 import CareerBotQuiz from './CareerBotQuiz.vue'
 
 export default {
-  components: {CareerBotQuiz  },
+  components: {CareerBotQuiz, CardCategory  },
   data() {
       return {
           show: false,
@@ -109,7 +112,8 @@ export default {
       reveal() {
           this.show = !this.show
       }
-  }
+  },
+  
     
 }
 </script>

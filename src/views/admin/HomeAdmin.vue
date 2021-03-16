@@ -20,7 +20,7 @@
                     </span>
             </p> -->
           </div>
-          <router-link to="/admin/career-hub">
+          <router-link to="/admin/careerbot">
           <a aria-label="" class="inline-flex lg:px-10 lg:py-3 py-3 px-10 rounded-lg items-center font-semibold transition lg:text-xl duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-gray-100 bg-green-600 ">
             Get Started
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">

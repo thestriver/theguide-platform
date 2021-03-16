@@ -5,11 +5,17 @@ import router from '../router/index'
 
 const store = createStore({
   state: {
-    userProfile: {}
+    userProfile: {},
+    pickedVisa: ''
   },
   mutations: {
     setUserProfile(state, val) {
       state.userProfile = val
+      
+    },
+    setPickedVisa(state, pickedVisa) {
+      // console.log(pickedVisa)
+      state.pickedVisa = pickedVisa
     }
   },
   actions: {
@@ -77,6 +83,10 @@ const store = createStore({
         })
       
         dispatch('fetchUserProfile', { uid: userId })
+      },
+      async visaFetch({ commit }, pickedVisa) {
+        commit("setPickedVisa", pickedVisa)
+
       }
   },
   modules: {

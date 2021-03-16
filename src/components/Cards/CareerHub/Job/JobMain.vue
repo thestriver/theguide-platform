@@ -4,18 +4,20 @@
          -->
       <splitpanes horizontal :first-splitter="firstSplitter" style="min-height: 400px" class="default-theme" id="featuredjobs">
           <pane class="lg:px-20" min-size="25" max-size="25" v-if="!hidePane2"  >
+                <!-- <h1 class="text-3xl text-black "> {{visaComp}} </h1> -->
                 <div class="relative flex w-full flex-wrap items-stretch  bg-gray-100 mx-auto my-3  border-2 ">
+                   <!-- <h1 class="text-3xl text-black "> {{visaComp}} </h1> -->
                   <span
                     class="z-10 h-full leading-snug font-normal text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
                   >
-                  <i class="fas fa-search"></i>
+                  <!-- <i class="fas fa-search"></i> -->
                   </span>
-                  <input
+                  <!-- <input
                     type="text"
                     v-model="filter"
                     placeholder="Filter by OPT, H1b, Tier 2 or PGWP"
                     class="px-3 py-3 border-2 placeholder-gray-400 text-gray-700 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full pl-10"
-                  />
+                  /> -->
               </div>
                   
                   
@@ -121,10 +123,15 @@ export default {
   filteredRows() {
     return this.data.filter(job => {
       const jobVisa = job.Visa.toString().toLowerCase();
-      const searchTerm = this.filter.toLowerCase();
+      // const searchTerm = this.filter.toLowerCase();
+      const searchTerm2 = this.$store.state.pickedVisa.toString().toLowerCase();
+      // console.log(searchTerm2)
 
-      return jobVisa.includes(searchTerm)
+      return jobVisa.includes(searchTerm2)
     });
+  },
+  visaComp() {
+    return this.$store.state.pickedVisa
   }
 },
 }

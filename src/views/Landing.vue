@@ -22,15 +22,15 @@
                             their career and immigration goals. 
                         </p>
                         <div class="flex pb-8 w-full md:justify-start justify-center items-end">
-                          <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
-                          <form class="validate w-full lg:w-full max-w-sm my-2" action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                          <div class="relative mr-4 md:w-full lg:w-full xl:w-full w-3/4">
+                          <form class="validate w-full lg:w-full lg:max-w-lg max-w-sm my-2" action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll" class="flex items-center border-2 border-green-600">
                             <label for="mce-EMAIL"></label>
-                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email bg-transparent border-none w-full text-gray-700 mr-3 py-4 px-2 leading-tight focus:outline-none" >
+                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email bg-transparent border-none  w-full text-gray-700 mr-3 py-4 px-2 pl-10 leading-tight focus:outline-none" >
                               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8860953b0b16ce89484143b0_7eb4c33354" tabindex="-1" value=""></div>
                               <div class="clear">
-                                <input type="submit" value="Join our waiting list" name="subscribe" id="mc-embedded-subscribe" class="flex-shrink-0 cursor-pointer bg-green-600 border-green-600 text-white text-md border-2 py-4 px-2"></div>
+                                <input type="submit" value="Join our waiting list" name="subscribe" id="mc-embedded-subscribe" class="flex-shrink-0 cursor-pointer bg-green-600 border-green-600 text-white text-md border-2 py-4 pl-2 pr-4"></div>
                               </div>
                           </form>
                             <!-- <div class="relative mr-4 md:w-full lg:w-full xl:w-2/3 w-3/4">
@@ -250,17 +250,16 @@
       <div class="flex pb-8 w-full md:justify-start items-end">
         <div class="">
           
-           <form class="validate w-full lg:w-full max-w-sm my-2" action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll" class="flex items-center border-2 border-green-600">
-              <label for="mce-EMAIL"></label>
-              <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email bg-transparent border-none w-full text-gray-700 mr-3 py-4 px-2 leading-tight focus:outline-none" >
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8860953b0b16ce89484143b0_7eb4c33354" tabindex="-1" value=""></div>
-                <div class="clear">
-                  <input type="submit" value="Join our waiting list" name="subscribe" id="mc-embedded-subscribe" class="flex-shrink-0 cursor-pointer bg-green-600 border-green-600 text-white text-md border-2 py-4 px-2"></div>
-                </div>
-            </form>
-
+           <form class="validate w-full lg:w-full lg:max-w-lg max-w-sm my-2" action="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&amp;id=7eb4c33354" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll" class="flex items-center border-2 border-green-600">
+                            <label for="mce-EMAIL"></label>
+                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required class=" email bg-transparent border-none  w-full text-gray-700 mr-3 py-4 px-5 lg:px-14 pl-10 leading-tight focus:outline-none" >
+                              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d8860953b0b16ce89484143b0_7eb4c33354" tabindex="-1" value=""></div>
+                              <div class="clear">
+                                <input type="submit" value="Join our waiting list" name="subscribe" id="mc-embedded-subscribe" class="flex-shrink-0 cursor-pointer bg-green-600 border-green-600 text-white text-md border-2 py-4 pl-2 pr-4"></div>
+                              </div>
+                          </form>
            <!-- <mailchimp-subscribe
             url="https://admissiontrackerapp.us1.list-manage.com/subscribe/post?u=d8860953b0b16ce89484143b0&id=7eb4c33354"
             user-id="xxx"
@@ -292,8 +291,8 @@
 
 </div>
    
-   <!-- Footer -->
-    <home-footer></home-footer>
+<!-- Footer -->
+<home-footer></home-footer>
 
 
   </div>

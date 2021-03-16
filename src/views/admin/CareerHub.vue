@@ -24,12 +24,12 @@
         
         <!-- Jobs -->
             <!-- Featured Categories card -->
-        <card-category></card-category>
+        <!-- <card-category></card-category> -->
             <!-- Featured Companies -->
         <card-company></card-company>
         <!-- <card-carousel></card-carousel> -->
             <!-- Featured jobs -->  <!-- Filters -->
-        <job-main id="featuredjobs" ></job-main>
+        <job-main ></job-main>
         
     </div>    
 

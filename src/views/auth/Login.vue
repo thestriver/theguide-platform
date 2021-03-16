@@ -37,7 +37,7 @@
             <hr class="mt-6 border-b-1 border-gray-400" />
           </div> -->
           <div class="flex-auto px-4 lg:px-10 py-10 pt-5">
-            <img :src="logo" alt="logo" class="rounded w-1/2 py-4">
+            <img :src="logo" alt="logo" class=" rounded  lg:mx-auto w-2/3 py-4">
             <div class="text-gray-500 text-center mb-3 font-bold">
               <small>Sign in with your credentials</small>
             </div>
@@ -71,7 +71,7 @@
                   v-model.trim="loginForm.password"
                 />
               </div>
-              <div>
+              <!-- <div>
                 <label class="inline-flex items-center cursor-pointer">
                   <input
                     id="customCheckLogin"
@@ -82,7 +82,7 @@
                     Remember me
                   </span>
                 </label>
-              </div>
+              </div> -->
 
               <div class="text-center mt-6">
                 <button
@@ -159,7 +159,7 @@
             <hr class="mt-6 border-b-1 border-gray-400" />
           </div> -->
           <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-            <img :src="logo" alt="logo" class="rounded py-6 h-20 ">
+            <img :src="logo" alt="logo" class=" rounded-3xl  lg:mx-auto w-1/2 py-4">
             <div class="text-gray-500 text-center pt-4 mb-3 font-bold">
               
               <h2>Please Sign up with credentials</h2>
@@ -210,7 +210,7 @@
                 />
               </div>
 
-              <div>
+              <!-- <div>
                 <label class="inline-flex items-center cursor-pointer">
                   <input
                     id="customCheckLogin"
@@ -224,7 +224,7 @@
                     </a>
                   </span>
                 </label>
-              </div>
+              </div> -->
 
               <div class="text-center mt-6">
                 <button
@@ -245,7 +245,7 @@
           </div>
         </div>
          <div class="flex flex-wrap mt-6 relative">
-          <div class="w-1/2 text-xl underline text-right text-gray-300 cursor-pointer">
+          <div class="w-1/2 text-xl mx-auto underline text-center text-gray-300 cursor-pointer">
             <a @click="toggleForm()">
               <small>Back to Login</small>
             </a>
@@ -260,7 +260,7 @@
 </template>
 <script>
 
-import logo from "@/assets/images/Logo(1).png";
+import logo from "@/assets/images/Logo(2)copy.png";
 import PasswordReset from '@/components/PasswordReset'
 
 export default {
