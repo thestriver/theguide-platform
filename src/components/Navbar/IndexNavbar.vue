@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
+    class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-1 navbar-expand-lg bg-white shadow"
   >
     <div
       class="container px-4 mx-auto flex flex-wrap items-center justify-between"
@@ -36,23 +36,23 @@
               About Us
             </router-link>
           </li>
-          <li class="flex items-center" style="margin-right: 20px">
+          <!-- <li class="flex items-center" style="margin-right: 20px">
             <router-link to="/admin" >
               Admin
             </router-link>
-          </li>
+          </li> -->
          
-          <!-- <li class="flex items-center ml-5">
+          <li class="flex items-center ml-5">
             <router-link to="/login" >
               <button
-              class="bg-green-600 text-white active:bg-green-600 text-xs font-bold uppercase px-5 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+              class="bg-green-600 text-white active:bg-green-600 text-sm font-bold uppercase px-5 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
               type="button"
             >
               <i class="fas fa-sign-in-alt"></i> Login 
             </button>
             </router-link>
             
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>

@@ -41,8 +41,8 @@
           title="Company"
           class="inline-flex items-center lg:mx-auto"
         >
-          <!-- <img :src="logo" alt=""> -->
-          <svg
+          <img src="@/assets/images/Logo_2_.png" class="lg:w-3/5" alt="">
+          <!-- <svg
             class="w-8 text-teal-accent-400"
             viewBox="0 0 24 24"
             stroke-linejoin="round"
@@ -60,7 +60,7 @@
           <span
             class="ml-2 text-3xl font-bold tracking-wide text-teal-accent-400 uppercase"
             >𝕋𝕙𝕖 𝔾𝕦𝕚𝕕𝕖</span
-          >
+          > -->
         </a>
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
           <li>
@@ -83,7 +83,7 @@
           </li>
           <li>
             <a @click="logout()"
-              class="inline-flex cursor-pointer items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
+              class="inline-flex cursor-pointer items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-600 hover:bg-green-700 focus:shadow-outline focus:outline-none"
               aria-label="Log Out"
               title="Log Out"
             >

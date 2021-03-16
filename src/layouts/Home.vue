@@ -2,7 +2,7 @@
   <div class="home">
    <home-navbar v-if="showNav"></home-navbar>
    <!-- <home-intro></home-intro> -->
-   <h2 class="text-4xl font-bold text-left mx-24 my-10 ">Welcome, <span class="text-teal-accent-700"> {{ userProfile.name }}  </span> </h2>
+   <h2 class="text-4xl font-bold text-left mx-24 my-10 ">Welcome, <span class="text-green-600 font-bold "> {{ userProfile.name }}  </span> </h2>
    <home-admin></home-admin>
 
    <!-- <home-career></home-career>
