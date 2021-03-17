@@ -7,7 +7,7 @@
 
    <!-- <home-career></home-career>
    <home-imm></home-imm> -->
-   <!-- <home-comm></home-comm> -->
+   <home-comm></home-comm>
    <!-- <home-services></home-services> -->
    <!-- <home-footer></home-footer> -->
   </div>
