@@ -1,6 +1,6 @@
 <template>
-    <div class="px-4 bg-gray-900  py-16 mx-5 lg:mx-24 rounded-xl lg:my-14  sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-20 lg:py-20">
-      <div class="grid gap-20 row-gap-8 lg:grid-cols-2">
+    <div class="px-4 bg-gray-900  py-6 mx-5 lg:mx-24 rounded-xl lg:my-14  sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-20 lg:py-20">
+      <div class="grid lg:gap-20 gap-6 row-gap-8 lg:grid-cols-2">
         <div class="flex flex-col justify-center text-center lg:py-5  p-5 rounded-2xl bg-white">
           <div class="max-w-xl mb-6 lg:mb-6">
             <div>
@@ -8,7 +8,7 @@
                 Find the right career opportunity
               </p>
             </div>
-            <h2 class="max-w-lg lg:mb-6  font-sans lg:text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            <h2 class="max-w-lg lg:mb-6  font-sans lg:text-6xl font-bold tracking-tight text-gray-900 text-5xl sm:leading-none">
               Career Hub
               <!-- <span class="inline-block text-green-600">will love</span> -->
             </h2>
@@ -39,7 +39,7 @@
                     DISCOVER EXCITING IMMIGRATION Pathways
                 </p>
                 </div>
-                <h2 class="max-w-lg mb-1 font-sans lg:text-6xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                <h2 class="max-w-lg mb-1 font-sans lg:text-6xl font-bold tracking-tight text-gray-900 text-4xl sm:leading-none">
                 Immigration Hub<br class="hidden md:block" />
                 <!-- you
                 <span class="inline-block text-green-600">will love</span> -->

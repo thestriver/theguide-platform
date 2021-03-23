@@ -8,7 +8,7 @@
     :class="{ 'animate-pulse': !showLoginForm }"
     >
     <div class="flex content-center items-center justify-center h-full">    
-      <div class="w-full lg:w-4/12 px-4">
+      <div class="w-full lg:w-4/12 ">
         <div
           class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0"
         >
@@ -37,7 +37,7 @@
             <hr class="mt-6 border-b-1 border-gray-400" />
           </div> -->
           <div class="flex-auto px-4 lg:px-10 py-10 pt-5">
-            <img :src="logo" alt="logo" class=" rounded  lg:mx-auto w-2/3 py-4">
+            <img :src="logo" alt="logo" class=" rounded  mx-auto w-2/3 py-4">
             <div class="text-gray-500 text-center mb-3 font-bold">
               <small>Sign in with your credentials</small>
             </div>
@@ -128,7 +128,7 @@
     </div>
 
    <!-- SIGN UP -->
-   <div v-else class="container mx-auto w-1/2 lg:w-2/3 h-full">
+   <div v-else class="container mx-auto w-full lg:w-2/3 h-full">
     <div class="flex content-center items-center justify-center h-full">
       <div class="w-full lg:w-8/12 px-4">
         <div
@@ -159,7 +159,7 @@
             <hr class="mt-6 border-b-1 border-gray-400" />
           </div> -->
           <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-            <img :src="logo" alt="logo" class=" rounded-3xl  lg:mx-auto w-1/2 py-4">
+            <img :src="logo" alt="logo" class=" rounded  mx-auto w-1/2 py-4">
             <div class="text-gray-500 text-center pt-4 mb-3 font-bold">
               
               <h2>Please Sign up with credentials</h2>

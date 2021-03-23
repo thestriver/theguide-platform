@@ -32,7 +32,7 @@
                             <input type="radio" class="form-radio" name="Internship" value="Internship" v-model="pickedVisa" />
                             <span class="ml-2">Internship</span>
                             </label>
-                            <label class="inline-flex items-center ml-4">
+                            <label class="inline-flex items-center lg:ml-4">
                             <input type="radio" class="form-radio" name="PGWP" value="PGWP" v-model="pickedVisa" />
                             <span class="ml-2">PGWP</span>
                             </label>
@@ -72,7 +72,7 @@
                             <!-- <router-link to="/admin/career-hub"> -->
                                 <button @click="visa()"
                                 type="submit" v-if="submitted" 
-                                class="mt-8 inline-flex items-center justify-center h-12 lg:px-52 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
+                                class="mt-8 inline-flex items-center justify-center h-12 lg:px-52 px-24 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
                                 >Submit</button>
                             <!-- </router-link> -->
 

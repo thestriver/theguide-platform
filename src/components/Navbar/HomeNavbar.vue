@@ -92,7 +92,7 @@
           </li>
         </ul>
         <!-- Mobile -->
-        <div class="ml-auto lg:hidden">
+         <div class="ml-auto lg:hidden">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -179,6 +179,24 @@
                       title="Immigration Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >Immigration Hub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admin"
+                      aria-label="Admin"
+                      title="Admin"
+                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >Admin</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/settings"
+                      aria-label="profile setttings"
+                      title="Profile Settings"
+                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >Profile Settings</a
                     >
                   </li>
                   <!-- <li>

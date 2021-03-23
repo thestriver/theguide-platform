@@ -1,6 +1,6 @@
 <template>
     <section class="p-6 bg-coolGray-100 text-coolGray-800">
-        <card-category></card-category>
+        <card-category class="hidden lg:block "></card-category>
         <div class="container mx-auto lg:mt-10">
             <span class="block mb-2 text-lg font-medium tracking-widest text-center uppercase text-teal-accent-400">Career Bot</span>
             <h2 class="text-4xl font-bold text-center text-coolGray-900">Interacting With Our Career Bot is Easy</h2>
@@ -80,9 +80,11 @@
 
 	<section class="bg-coolGray-100 text-coolGray-800">
 		<div class="container flex flex-col justify-center mx-auto ">
-			<div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-coolGray-300">
+			<div class="flex flex-col divide-y px-8 lg:px-12 xl:px-32 divide-coolGray-300">
 					
-                    <button @click="reveal()" v-scroll-to="{ element: '#careerquiz', duration: 1000  }" class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
+                    <button @click="reveal()" 
+                    v-scroll-to="{ element: '#careerquiz', duration: 1000  }" 
+                    class="py-2 px-2  outline-none bg-teal-accent-400 rounded-xl  cursor-pointer focus:underline">START</button>
 
                      <transition name="fade" id="careerquiz" class="lg:mt-8">
                         <div v-show="show" class="px-4 pb-4">

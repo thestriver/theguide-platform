@@ -32,7 +32,7 @@
 
                           <div class="flex lg:w-6/12 py-5" v-if="job.open"  >
 
-                              <div class="ml-6 mr-5">
+                              <div class="ml-6 mr-5 lg:block hidden">
                                   <img class="lg:h-16 lg:w-16 w-12 h-8 rounded" :src=job.logo alt="" />
                               </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="modal ">
+  <div class="modal">
     <div class="modal-content">
       <div @click="$emit('close')" class="close">close</div>
       <!-- <button @click="$emit('close')" class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" v-on:click="toggleModal()">
@@ -13,7 +13,7 @@
         <p>Enter your email to reset your password</p>
         <form @submit.prevent>
           <input  v-model.trim="email" type="email" placeholder="you@email.com"
-          class=" mb-5 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
+          class=" mb-5 py-3 px-1 placeholder-gray-400 text-gray-700 relative bg-white border-2 border-black rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
            />
         </form>
         <p v-if="errorMsg !== ''" class="error">{{ errorMsg }}</p>
@@ -115,4 +115,31 @@ p {
     width: 100%;
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 680px)
+{
+  .modal {
+  /* display: flex;
+  top: 80px;
+  right: 80px;
+  width: 500px;
+  height: 100px;
+  background: rgba(#333, 0.5);
+  transition: opacity 0.3s ease; */
+  display: flex;
+  position: absolute;
+  z-index:1;
+  top: 120px;
+  right: 10px;
+  bottom: 0;
+  left: 10px;
+  width: 385px;
+  height: 100px;
+  background: rgba(#333, 0.5);
+  transition: opacity 0.3s ease;
+
+}
+
+}
 </style>

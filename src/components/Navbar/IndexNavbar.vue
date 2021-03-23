@@ -31,7 +31,7 @@
       >
         
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="flex items-center" style="margin-right: 20px">
+          <li class="flex items-center my-2 lg:my-0 ml-10 lg:ml-0 " style="@media (min-width: 1024px) {margin-right: 20px}">
             <router-link to="/about" >
               About Us
             </router-link>

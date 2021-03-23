@@ -13,7 +13,7 @@
         </p>
 			</div>
 			<div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-				<div>
+				<div class=" lg:order-none order-last">
 					<p class="mt-3 text-lg text-coolGray-600">
            We personally know the frustration and hustle that come with being an international student - from getting funded, growing your career(internships and jobs) and securing the right immigration status.
             </p>
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 				</div>
-				<div aria-hidden="true" class="mt-10 lg:mt-0">
+				<div aria-hidden="true" class="my-2 lg:mt-0">
 					<img src="@/assets/images/students1.jpeg" alt="" class="mx-auto rounded-lg shadow-lg">
 				</div>
 			</div>
