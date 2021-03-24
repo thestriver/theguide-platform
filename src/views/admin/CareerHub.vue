@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="careerhub">
         <home-navbar></home-navbar>
         <!-- Welcome , User -->
         <!-- <card-stats></card-stats> -->

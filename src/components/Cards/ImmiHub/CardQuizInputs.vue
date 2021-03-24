@@ -41,7 +41,7 @@
 
                             <!-- <span class="mt-5 block">Picked: {{ picked }}</span> -->
                         </div>
-                        <button @click="change()" v-if="display" class="underline bg-teal-accent-400 mt-5" >
+                        <button @click="change()" v-if="display" class="rounded lg:px-1 lg:py-1 bg-teal-accent-400 mt-5" >
                             Next
                         </button>
 
@@ -57,7 +57,7 @@
                             </select>
                             <!-- <span class="mt-6 block">Selected: {{ selected }}</span> -->
                         </label>
-                        <button @click="change2()" v-if="display2" class="underline bg-teal-accent-400 mt-5 ">
+                        <button @click="change2()" v-if="display2" class="rounded lg:px-1 lg:py-1 bg-teal-accent-400 mt-5 ">
                             Next
                         </button>
                         </div>
@@ -115,7 +115,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">H1-B</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3 </span>
+                                        <span>Ease: 3 / 5 </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -130,7 +130,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">OPT</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 </span>
+                                        <span>Ease: 4.5 / 5 </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -145,7 +145,7 @@
                             <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
                             <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">O1-visa</h3>
                             <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 2.5 </span>
+                            <span>Ease: 2.5 / 5  </span>
                             <span>
                                 <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -160,7 +160,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">CPT</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                                        <span>Ease: 4 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -197,7 +197,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">PGWP - Post Graduation Work Permit</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 </span>
+                                        <span>Ease: 4.5 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -212,7 +212,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - PNP</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3.5 </span>
+                                        <span>Ease: 3.5 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -227,7 +227,7 @@
                             <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
                             <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - CEC</h3>
                             <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 4 </span>
+                            <span>Ease: 4 / 5  </span>
                             <span>
                                 <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -242,7 +242,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3.5 </span>
+                                        <span>Ease: 3.5 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -283,7 +283,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug"> Post Study Work Permit</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 </span>
+                                        <span>Ease: 4.5 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -298,7 +298,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Tier 2 Work Visa </h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                                        <span>Ease: 4 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -313,7 +313,7 @@
                             <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
                             <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Tier 1 - Exceptional Promising Talent</h3>
                             <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 3 </span>
+                            <span>Ease: 3 / 5  </span>
                             <span>
                                 <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -328,7 +328,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                                        <span>Ease: 4 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -356,7 +356,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-teal-accent-400">Australia</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Post Graduation Work Permit</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                                        <span>Ease: 4 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -433,7 +433,7 @@
                                     <a href="#" class="text-md tracking-wider uppercase hover:underline text-yellow-800">Germany</a>
                                     <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Post Graduation Work Permit</h3>
                                     <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                                        <span>Ease: 4 / 5  </span>
                                         <span>
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Learn More
@@ -493,7 +493,7 @@
                 </div>
             </ul>
 
-           <div class=" border-2 border-teal-accent-400 lg:px-10 lg:mt-10 rounded-xl ">
+           <div class=" border-2 border-teal-accent-400 lg:px-10 px-2 py-2 mt-10 rounded-xl ">
                 <p class="lg:my-1">  <span class="bg-teal-accent-400 px-2 py-1 rounded-full ">Coming Soon <br> </span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides on each Recommended path. Plus success stories from international students 
             who have navigated such path successfully. </p>
            </div>

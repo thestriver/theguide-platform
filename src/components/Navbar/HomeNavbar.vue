@@ -139,10 +139,10 @@
                         <rect x="14" y="1" width="7" height="6"></rect>
                         <rect x="14" y="11" width="7" height="12"></rect>
                     </svg>
-                    <span
+                    <!-- <span
                         class="ml-2 text-3xl font-bold tracking-wide text-green-600 uppercase"
                         >𝕋𝕙𝕖 𝔾𝕦𝕚𝕕𝕖</span
-                    >
+                    > -->
                   </a>
                 </div>
                 <div>
@@ -165,7 +165,7 @@
                 <ul class="space-y-4">
                   <li>
                     <a
-                      href="/admin/career-hub"
+                      href="/admin/careerbot"
                       aria-label="Career Hub"
                       title="Career Hub"
                       class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -218,10 +218,10 @@
                     >
                   </li>
                   <li>
-                    <a
+                    <a @click="logout()"
                       class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-accent-400 focus:shadow-outline focus:outline-none"
-                      aria-label="Sign up"
-                      title="Sign up"
+                      aria-label="Log Out"
+                      title="Log Out"
                     >
                       Log out
                     </a>

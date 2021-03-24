@@ -15,8 +15,8 @@
                         so I can guide you towards our curated opportunities.</p>
                     <p>I'm excited to help you find your next job. Let's get started.</p>
 				</div>
-				<div class="pt-6 pb-4 space-y-2">
-					<div class="mt-4">
+				<div class="pt-2 pb-4 space-y-2">
+					<div class="">
 
                         <span class="text-gray-700">For what visa category are you looking for a job? </span>                
                         <div class="mt-2">
@@ -41,9 +41,9 @@
                             <span class="ml-2">H1b</span>
                             </label>
 
-                            <span class="mt-5 block">Picked: {{ pickedVisa }}</span>
+                            <!-- <span class="mt-5 block">Picked: {{ pickedVisa }}</span> -->
                         </div>
-                        <button @click="change()" v-if="display" class="underline bg-teal-accent-400 mt-5" >
+                        <button @click="change()" v-if="display" class="rounded cursor-pointer lg:px-1 lg:py-1 bg-teal-accent-400 mt-5" >
                             Next
                         </button>
 
@@ -63,14 +63,14 @@
                             
                             </label>
 
-                            <span class="my-6 block">Selected: {{ openTime }}</span>
+                            <!-- <span class="my-6 block">Selected: {{ openTime }}</span> -->
 
                             
                             <!-- <button @click="change2()" v-if="display2" class="underline bg-teal-accent-400 mt-5 ">
                             Next
                             </button> -->
                             <!-- <router-link to="/admin/career-hub"> -->
-                                <button @click="visa()"
+                                <button @click="visa()"  v-scroll-to="{ element: '#careerhub', duration: 1000  }" 
                                 type="submit" v-if="submitted" 
                                 class="mt-8 inline-flex items-center justify-center h-12 lg:px-52 px-24 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400  focus:shadow-outline focus:outline-none"
                                 >Submit</button>
