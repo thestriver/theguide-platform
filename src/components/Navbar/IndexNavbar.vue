@@ -37,7 +37,7 @@
             </router-link>
           </li>
           <!-- <li class="flex items-center" style="margin-right: 20px">
-            <router-link to="/admin" >
+            <router-link to="/admin" ></router-link>
               Admin
             </router-link>
           </li> -->

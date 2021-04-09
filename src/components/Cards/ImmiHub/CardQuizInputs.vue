@@ -1,6 +1,6 @@
 <template>
 	<div  class="bg-coolGray-100 text-coolGray-900">
-		<div  class="container mx-auto grid grid-cols-12">
+		<!-- <div  class="container mx-auto grid grid-cols-12">
 			<div id="back" class="flex flex-col justify-center col-span-12 align-middle bg-gray-700 bg-no-repeat  lg:col-span-6 lg:h-auto" 
             :style="
             {'background-image': 'url(' + worried + ')', 'background-position': 'center', 'background-size': 'cover'}
@@ -39,7 +39,7 @@
                             <span class="ml-2">5</span>
                             </label>
 
-                            <!-- <span class="mt-5 block">Picked: {{ picked }}</span> -->
+                            <span class="mt-5 block">Picked: {{ picked }}</span>
                         </div>
                         <button @click="change()" v-if="display" class="rounded lg:px-1 lg:py-1 bg-teal-accent-400 mt-5" >
                             Next
@@ -55,7 +55,7 @@
                                 {{ option.text }} 
                                 </option>
                             </select>
-                            <!-- <span class="mt-6 block">Selected: {{ selected }}</span> -->
+                            <span class="mt-6 block">Selected: {{ selected }}</span>
                         </label>
                         <button @click="change2()" v-if="display2" class="rounded lg:px-1 lg:py-1 bg-teal-accent-400 mt-5 ">
                             Next
@@ -76,7 +76,7 @@
                             <span class="ml-2">No</span>
                             </label>
 
-                            <!-- <span class="mt-6 block">Selected: {{ open }}</span> -->
+                            <span class="mt-6 block">Selected: {{ open }}</span>
                         </div>
                     </transition>  
 
@@ -94,246 +94,336 @@
                 >Submit</button>
 
 			</div>
-		</div>
+		</div> -->
+
+        <!-- {{ filteredArr }}
+
+        <div v-for=" arr in filteredArr" :key="arr.id" >
+            <div v-if=" arr.selected == 'UK' " >
+                <h1> Visa : {{ arr.pickedVisa }} </h1>
+                <h1> Open : {{ arr.open }} </h1>
+            </div>
+        </div> -->
 
         <!-- Card -->
 
-        <div v-if="opportunities" id="cardopp" class="mt-5 lg:min-w-full lg:-mx-40   py-2 ">
-            <h1 class=" text-teal-accent-400 text-center text-3xl font-bold my-6 ">Exciting Paths You Can Explore</h1>
-            <ul>
+        <div v-for=" arr in filteredArr" :key="arr.id"  id="cardopp" class="mt-5 lg:mx-10   py-2 ">
+            <h1 class=" text-green-400 text-center text-3xl font-bold my-6 ">Exciting Paths You Can Explore</h1>
+            <ul class="my-10"  >
                 <div v-if="
-                 selected === 'USA' && open === 'No' || selected === 'USA' && open === 'Yes' || selected === 'Canada' && open === 'Yes' 
-                || selected === 'UK' && open === 'Yes' || selected === 'Australia' && open === 'Yes' || selected === 'Germany' && open === 'Yes' 
+                 arr.selected === 'USA' && arr.open === 'No' || arr.selected === 'USA' && arr.open === 'Yes' || arr.selected === 'Canada' && arr.open === 'Yes' 
+                || arr.selected === 'UK' && arr.open === 'Yes' || arr.selected === 'Australia' && arr.open === 'Yes' || arr.selected === 'Germany' && arr.open === 'Yes' 
                  ">
-                 <!-- <li class="semi-bold text-xl">USA</li> -->
-                 <section class="lg:py-2 sm:py-12 bg-gray-900  text-coolGray-800">
+                 
+                 <section class="lg:py-2 sm:py-12   text-coolGray-800">
                     <div class="container mx-auto space-y-4">
                         <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ usa +')', 'opacity': '1.5', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/usa-4.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl tracking-wider uppercase text-blue-900">USA</a>
+                                    </div>
                                     
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">H1-B</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3 / 5 </span>
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-blue leading-snug">H1-B</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white" >3 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 3 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(1)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="OPT"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">OPT</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 / 5 </span>
+                             <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ usa +')', 'opacity': '1.5', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/usa-4.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl tracking-wider uppercase text-blue-900">USA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-blue leading-snug">OPT</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white" >1-3 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4.5 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(2)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                        <div class="flex flex-col flex-1 p-6">
-                            <a href="#" aria-label="O1-visa"></a>
-                            <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">O1-visa</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 2.5 / 5  </span>
-                            <span>
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-green-600">USA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">CPT</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 / 5  </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ usa +')', 'opacity': '1.5', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/usa-4.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl tracking-wider uppercase text-blue-900">USA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-blue leading-snug">O-1 visa</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white" >3 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 2.5 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(3)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ usa +')', 'opacity': '1.5', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/usa-4.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl tracking-wider uppercase text-blue-900">USA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-blue leading-snug">CPT</h3>
+                                        <p class="bg-blue-900 px-2 py-0 rounded-lg text-lg text-white" >1 year</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
+                                        <span>
+                                        <button @click="viewGuide(4)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- <li class="semi-bold text-xl">USA</li>
-                <li>OPT</li>
-                <li>H1-B</li>
-                <li>O1-visa</li>
-
-                    <hr class="my-5"> -->
+              
                 </div>
 
 
 
                 <div class="my-10" v-if="
-                 selected === 'Canada' && open === 'No' || selected === 'Canada' && open === 'Yes' ||  selected === 'USA' && open === 'Yes' 
-                 || selected === 'UK' && open === 'Yes'  || selected === 'Australia' && open === 'Yes' || selected === 'Germany' && open === 'Yes' 
+                 arr.selected === 'Canada' && arr.open === 'No' || arr.selected === 'Canada' && arr.open === 'Yes' ||  arr.selected === 'USA' && arr.open === 'Yes' 
+                 || arr.selected === 'UK' && arr.open === 'Yes'  || arr.selected === 'Australia' && arr.open === 'Yes' || arr.selected === 'Germany' && arr.open === 'Yes' 
                  
                  "  >
 
-                 <section class="lg:py-2 sm:py-12 bg-gray-900  text-coolGray-800">
+                 <section class="lg:py-2 sm:py-12   text-coolGray-800">
                     <div class="container mx-auto space-y-4">
                         <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ canada +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/canada-logo.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-red-900">CANADA</a>
+                                    </div>
                                     
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">PGWP - Post Graduation Work Permit</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 / 5  </span>
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white  leading-snug">PGWP</h3>
+                                        <p class="bg-red-900 px-2 py-1 rounded-lg text-lg text-white" >0.6 - 3 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(5)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="OPT"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - PNP</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3.5 / 5  </span>
+                             <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ canada +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/canada-logo.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-red-900">CANADA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white  leading-snug">PNP</h3>
+                                        <p class="bg-red-900 px-2 py-1 rounded-lg text-lg text-white" >PR</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 2.5 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(6)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                        <div class="flex flex-col flex-1 p-6">
-                            <a href="#" aria-label="O1-visa"></a>
-                            <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - CEC</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 4 / 5  </span>
-                            <span>
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 3.5 / 5  </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ canada +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/canada-logo.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-red-900">CANADA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white  leading-snug">Express Entry</h3>
+                                        <p class="bg-red-900 px-2 py-1 rounded-lg text-lg text-white" >PR</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 3 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(7)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ canada +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/canada-logo.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-red-900">CANADA</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white  leading-snug">Startup Visa</h3>
+                                        <p class="bg-red-900 px-2 py-1 rounded-lg text-lg text-white" >PR</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 2.5 / 5 </span>
+                                        <span>
+                                        <button @click="viewGuide(8)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- <li class="semi-bold text-xl" >Canada</li>
-                <li>Startup Visa</li>
-                <li>PGWP - Post Graduation Work Permit</li>
-
-                    <hr class="my-5"> -->
+                
                 </div>
 
 
                 
 
                 <div v-if=" 
-                selected === 'UK' && open === 'No' || selected === 'UK' && open === 'Yes' || selected === 'USA' && open === 'Yes' 
-                || selected === 'Canada' && open === 'Yes'  || selected === 'Australia' && open === 'Yes' || selected === 'Germany' && open === 'Yes' 
+                arr.selected === 'UK' && arr.open === 'No' || arr.selected === 'UK' && arr.open === 'Yes' || arr.selected === 'USA' && arr.open === 'Yes' 
+                || arr.selected === 'Canada' && arr.open === 'Yes'  || arr.selected === 'Australia' && arr.open === 'Yes' || arr.selected === 'Germany' && arr.open === 'Yes' 
                 " >
-                    <!-- <li class="semi-bold text-xl" >UK</li>
-                    <li>Startup Visa</li>
-                    <li>Tier 2</li>
-                    <li>Tier 1 - Exceptional Promising Talent</li>
-                    <li>Post Study Work Permit</li> -->
-
-                    <section class="lg:py-2 sm:py-12 bg-gray-900  text-coolGray-800">
+                    <section class="lg:py-2 sm:py-12   text-coolGray-800">
                     <div class="container mx-auto space-y-4">
                         <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ uk +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/united-kingdom-2.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">U.K</a>
+                                    </div>
                                     
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug"> Post Study Work Permit</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 / 5  </span>
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold  text-white  leading-snug">Post-Study</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white">2 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4.5 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(9)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="OPT"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Tier 2 Work Visa </h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 / 5  </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ uk +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/united-kingdom-2.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">U.K</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Tier 2</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white">5 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(10)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                        <div class="flex flex-col flex-1 p-6">
-                            <a href="#" aria-label="O1-visa"></a>
-                            <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Tier 1 - Exceptional Promising Talent</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 3 / 5  </span>
-                            <span>
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-blue-600">U.K</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 / 5  </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ uk +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/united-kingdom-2.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">U.K</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Tier 1 (E)</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white">5+ years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(11)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ uk +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/united-kingdom-2.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">U.K</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Startup Visa</h3>
+                                        <p class="bg-blue-900 px-2 py-1 rounded-lg text-lg text-white">2 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 3.5 / 5 </span>
+                                        <span>
+                                        <button @click="viewGuide(12)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -344,72 +434,58 @@
                 
 
                 <div v-if="
-                selected === 'Australia' && open === 'No' || selected === 'Australia' && open === 'Yes' || selected === 'USA' && open === 'Yes' 
-                || selected === 'Canada' && open === 'Yes' || selected === 'UK' && open === 'Yes' || selected === 'Germany' && open === 'Yes' 
+                arr.selected === 'Australia' && arr.open === 'No' || arr.selected === 'Australia' && arr.open === 'Yes' || arr.selected === 'USA' && arr.open === 'Yes' 
+                || arr.selected === 'Canada' && arr.open === 'Yes' || arr.selected === 'UK' && arr.open === 'Yes' || arr.selected === 'Germany' && arr.open === 'Yes' 
                  " >
                  <section class="lg:py-2 sm:py-12 lg:mt-10 text-coolGray-800">
                     <div class="container mx-auto space-y-4">
                         <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col border-black border-8 bg-white">
-                                <div class="flex flex-col flex-1 p-6">
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ aus +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/australia-2.svg" alt="usalogo" class=" w-10 h-8 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">Australia</a>
+                                    </div>
                                     
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-teal-accent-400">Australia</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Post Graduation Work Permit</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 / 5  </span>
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Post study</h3>
+                                        <p class="bg-black px-2 py-1 rounded-lg text-lg text-white">2-4 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(13)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="OPT"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - PNP</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ aus +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/australia-2.svg" alt="usalogo" class=" w-10 h-8 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-blue-900">Australia</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Residence Visa</h3>
+                                        <p class="bg-black px-2 py-1 rounded-lg text-lg text-white">PR</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 3.5 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(14)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                        <div class="flex flex-col flex-1 p-6">
-                            <a href="#" aria-label="O1-visa"></a>
-                            <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - CEC</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 4 </span>
-                            <span>
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 </span>
-                                        <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </section>
@@ -418,100 +494,91 @@
                 
 
                 <div v-if="
-                 selected === 'Germany' && open === 'No' || selected === 'Germany' && open === 'Yes' || selected === 'USA' && open === 'Yes' 
-                 || selected === 'Canada' && open === 'Yes' || selected === 'UK' && open === 'Yes' 
-                 || selected === 'Australia' && open === 'Yes' 
+                 arr.selected === 'Germany' && arr.open === 'No' || arr.selected === 'Germany' && arr.open === 'Yes' || arr.selected === 'USA' && arr.open === 'Yes' 
+                 || arr.selected === 'Canada' && arr.open === 'Yes' || arr.selected === 'UK' && arr.open === 'Yes' 
+                 || arr.selected === 'Australia' && arr.open === 'Yes' 
                  "  >
-                <!-- <li class="semi-bold text-xl">Germany</li>
-                <li>Post Study Permit</li> -->
+               
                  <section class="lg:py-2 sm:py-12 lg:mt-10 text-coolGray-800">
                     <div class="container mx-auto space-y-4">
                         <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col border-black border-8 bg-white">
-                                <div class="flex flex-col flex-1 p-6">
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ ger +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/germanyc.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-yellow-900">Germany</a>
+                                    </div>
                                     
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-yellow-800">Germany</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Post Graduation Work Permit</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4 / 5  </span>
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Post Study</h3>
+                                        <p class="bg-yellow-900 px-2 py-1 rounded-lg text-lg text-white">18 months</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 4 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(15)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-yellow-900 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="OPT"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - PNP</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 </span>
+                            <div class="flex flex-col border rounded-lg " 
+                            :style="{'background-image':'url('+ ger +')', 'opacity': '0.9', 'background-position': 'center', 'background-size': 'cover'}"
+                            >  
+                            <div class="flex flex-col flex-1 p-6" >
+                                    <div class="flex space-x-2 ">
+                                        <img src="@/assets/images/germanyc.svg" alt="usalogo" class=" w-10 inline-flex " >
+                                        <a href="#" class="flex text-xl font-semibold tracking-wider uppercase text-yellow-900">Germany</a>
+                                    </div>
+                                    
+                                    <div class="flex py-5">
+                                        <h3 class="flex-1 text-2xl font-bold text-white   leading-snug">Work Permit</h3>
+                                        <p class="bg-yellow-900 px-2 py-1 rounded-lg text-lg text-white">2-4 years</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between pt-3 space-x-4 text-xs text-coolGray-600">
+                                        <span class="text-white text-sm bg-black px-2 py-2 rounded-md ">Ease: 3 / 5 </span>
                                         <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
+                                        <button @click="viewGuide(16)" type="submit" class="inline-flex justify-center py-1 px-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-yellow-900 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Learn More
+                                        </button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col bg-white">
-                        <div class="flex flex-col flex-1 p-6">
-                            <a href="#" aria-label="O1-visa"></a>
-                            <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Express Entry - CEC</h3>
-                            <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                            <span>Ease: 4.5 </span>
-                            <span>
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="flex flex-col bg-white">
-                                <div class="flex flex-col flex-1 p-6">
-                                    <a href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
-                                    <a href="#" class="text-md tracking-wider uppercase hover:underline text-red-600">CANADA</a>
-                                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Startup Visa</h3>
-                                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-coolGray-600">
-                                        <span>Ease: 4.5 </span>
-                                        <span>
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Learn More
-                            </button>
-                            </span>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </section>
                 </div>
             </ul>
 
-           <div class=" border-2 border-teal-accent-400 lg:px-10 px-2 py-2 mt-10 rounded-xl ">
+           <!-- <div class=" border-2 border-teal-accent-400 lg:px-10 px-2 py-2 mt-10 rounded-xl ">
                 <p class="lg:my-1">  <span class="bg-teal-accent-400 px-2 py-1 rounded-full ">Coming Soon <br> </span> Our Resource Center will contain loads of in-depth, tested and trusted how-to guides on each Recommended path. Plus success stories from international students 
             who have navigated such path successfully. </p>
-           </div>
+           </div> -->
             
 
         </div>
       
-	</div>
+	
+    </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import worried from "@/assets/images/worried.jpeg"
+import usa from "@/assets/images/empire-state.jpeg"
+import canada from "@/assets/images/can4.jpg"
+import uk from "@/assets/images/uk2.jpg"
+import aus from "@/assets/images/aus1.jpeg"
+import ger from "@/assets/images/ger2.jpg"
 export default {
     data() {
         return {
-            worried,
+            usa, canada, uk, aus, ger,
             picked: '',
+            selected: '',
             open: '',
             opportunities: false,
             submitted: false,
@@ -520,7 +587,6 @@ export default {
             display: true,
             display2: false,
             showComponent: true,
-            selected: 'USA',
             options: [
                 { text: 'USA', value: 'USA' },
                 { text: 'Canada', value: 'Canada' },
@@ -532,6 +598,10 @@ export default {
         }
     },
     methods: {
+        viewGuide(id){
+            this.$store.dispatch('createId', id)
+            this.$router.push('/admin/immguides')
+        },
         change() {
             this.show = !this.show,
             this.display = false
@@ -549,7 +619,21 @@ export default {
         }
     },
      computed: {
-    ...mapState(['userProfile'])
+    ...mapState(['userProfile', 'getDataCollected']),
+    filteredArr(){
+      let filt = []
+      for ( let i = 0 ; i < this.getDataCollected.length; i++ ){
+        if(this.getDataCollected[i].userName === this.userProfile.name ){
+          filt.push(this.getDataCollected[i])
+        }
+      }
+      // const filteredData = this.getDataCollected.filter( dat => dat.userName  == this.userProfile.name )
+      // const filt = filteredData
+      //  return filteredData
+      // console.log(6, filt)
+      return filt
+      
+  }
   },
 
 }

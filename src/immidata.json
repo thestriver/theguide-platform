@@ -1,0 +1,309 @@
+[
+    {
+        "id": 1,
+        "logo": "https://cdn.worldvectorlogo.com/logos/usa-4.svg",
+        "country": "USA",
+        "Visatype": "H-1B",
+        "overview": "The H-1B visa is a temporary work visa issued to skilled professionals. It allows U.S. employers to temporarily employ foreign workers for a specific period of time, usually 3 years and extendable to 6 years. After this, the employee is expected to leave the US except when granted another employment or a change of status. The main body incharge include the United States Citizenship and Immigration Services (USCIS) and United States Department of Labor.",
+        "requirements": {
+            "requirementa": "One of the following:",
+            "requirementb": "Bachelor's or higher degree or its equivalent from an accredited college or university.",
+            "requirementc": "Training or experience related to work or in line with job requirements.",
+            "requirementd": "Qualifications for work in U.S. government positions especially US Department of Defense.",
+            "requiremente": "Securing an employer."
+        },
+        "others": {
+            "othera": "Processing period: 3 - 6 months",
+            "otherb": "The first step in applying for a H-1B visa is getting a US based sponsoring employer.",
+            "otherc": "Depending, your prospective employer might be required to file a Labor Condition Application (LCA) with the United States Department of Labor on your behalf. With an approved LCA, your prospective employer files the Petition for a Nonimmigrant Worker (Form I-129) with USCIS alongside other necessary supporting documents to request for H-1B classification for you.",
+            "otherd": "After approval of Form I-129 by USCIS, your prospective employer will receive a Notice of Action (Form I-797), and you can apply for a visa. P.S. Procedure for visa application varies",
+            "othere": "Complete an online Nonimmigrant Visa Application (Form DS-160)",
+            "otherf": "Schedule an appointment for visa interview at any U.S. embassy or consulate after paying fees",
+            "otherg": "Attend an interview with all necessary documents."
+        },
+        "image": "https://cdn.pixabay.com/photo/2015/12/08/00/40/empire-state-building-1081929_1280.jpg"
+        
+    },
+    {
+        "id": 2,
+        "logo": "https://cdn.worldvectorlogo.com/logos/usa-4.svg",
+        "country": "USA",
+        "Visatype": "OPT",
+        "overview": "Optional Practical Training (OPT) is a form of temporary employment authorization for US international students. It allows international students to engage in part time jobs while school is in session or full time when school is not in session for an aggregate period of 12 months. Science, Technology, Engineering and Mathematics (STEM) students might be eligible for a 24-month extension.",
+        "requirements": {
+            "requirementa": "F-1 visa",
+            "requirementb": "Currently enrolled full time in a Bachelor’s, Master’s or Doctoral program for at least one complete academic year."
+        },
+        "others": {
+            "othera": "Processing period: 3 - 4 months",
+            "otherb": "It doesn't require you to have a job offer from an employer before applying.",
+            "otherc": "However, it requires that your job is related and relevant to your field of study.",
+            "otherd": "You're entitled to OPT for each degree level, however the OPT period can not be accumulated over these levels I.e. 12 months for bachelor’s and 12 months for master’s cannot be accumulated to 24 months. You use each before progressing or you relinquish it.",
+            "othere": "Application and some guidelines for OPT may differ by school. Kindly check your school's International Student Service page for more information."
+        },
+        "image": "https://cdn.pixabay.com/photo/2015/12/08/00/40/empire-state-building-1081929_1280.jpg"
+    },
+    {
+        "id": 3,
+        "logo": "https://cdn.worldvectorlogo.com/logos/usa-4.svg",
+        "country": "USA",
+        "Visatype": "O1-Visa",
+        "overview": "O-1 visa is a temporary work visa issued to individuals who have been able to demonstrate extraordinary talent in a sector or industry and have a record of extraordinary achievement that is well recognized nationally or internationally. Recognition may be in the form of contribution to or achievements in Science, Art, Education, Business, Athletics or Motion picture and Television industry. An O-1 visa is usually granted for 3 years with unlimited extension, although one year at a time.",
+        "requirements": {
+            "requirementa": "Proof of recognized extraordinary abilities or achievements.",
+            "requirementb": "A detailed work contract or documentation from your employer."
+        },
+        "others": {
+            "othera": "Processing period: 2 - 3 months",
+            "otherb": "Must have a US employer or agent.",
+            "otherc": "Your work must be related to your achievement or recognition.",
+            "otherd": "Your employer files the Petition for a Nonimmigrant Worker (I-129) on your behalf and also provides all necessary supporting documents and applicable fee as requested by the United States Citizenship and Immigration Services (USCIS).",
+            "othere": "After approval of Form I-129 by USCIS, your prospective employer will receive a Notice of Action (Form I-797). If approved, you will be able to apply for the relevant O visa.",
+            "otherf": "Complete an online Nonimmigrant Visa Application (Form DS-160).",
+            "otherg": "Schedule an appointment for visa interview at any U.S. embassy or consulate after paying fees applicable.",
+            "otherh": "Attend an interview with all necessary documents."
+        },
+        "image": "https://cdn.pixabay.com/photo/2015/12/08/00/40/empire-state-building-1081929_1280.jpg"
+    },
+    {
+        "id": 4,
+        "logo": "https://cdn.worldvectorlogo.com/logos/usa-4.svg",
+        "country": "USA",
+        "Visatype": "CPT",
+        "overview": "Curricular Practical Training (CPT) is a form of temporary employment authorization for US international students. Unlike Optional Practical Training (OPT) which can be done during or after academic sessions, CPT is carried during the academic session as part of one’s curriculum. CPT can be part time or full time but can only be carried out for 1 year.",
+        "requirements": {
+            "requirementa": "F-1 visa",
+            "requirementb": "Currently enrolled full time in a Bachelor’s, Master’s or Doctoral program for at least one complete academic year.",
+            "requirementc": "Securing an agreement from an employer/a training position."
+        },
+        "others": {
+            "othera": "Processing period: 1 to 2 weeks",
+            "otherb": "It requires you to have an agreement with or an offer letter from an employer.",
+            "otherc": "Employment must be related to your field of study.",
+            "otherd": "1 year of full time CPT makes you ineligible for OPT. However, part time CPT is fine and won’t hinder OPT after completion of degree.",
+            "othere": "Application and some guidelines for CPT may differ by school. Kindly check your school's International Student Service page for more information."
+        },
+        "image": "https://cdn.pixabay.com/photo/2015/12/08/00/40/empire-state-building-1081929_1280.jpg"
+    },
+    {
+        "id": 5,
+        "logo": "https://cdn.worldvectorlogo.com/logos/canada-logo.svg",
+        "country": "CANADA",
+        "Visatype": "PGWP",
+        "overview": "The Post Graduation Work Permit Program (PGWPP)  is designed for international students after the completion of their program of study, be it a diploma or degree. With the given work permit, they'll be able to work in and extend their stay in Canada. Asides gaining work experience, PGWPP is one of the pathways to become a Canadian permanent resident.",
+        "requirements": {
+            "requirementa": "Valid international passport",
+            "requirementb": "Completion of program of study."
+        },
+        "others": {
+            "othera": "Processing period: 3 - 6 months",
+            "otherb": "Work permits can be valid from 8 months to 3 years depending on the length of your program of study. i.e you can’t work for a duration longer than that of your program.",
+            "otherc": "Not all programs of study are eligible for PGWP. Verify if the program you’re in is eligible.",
+            "otherd": "Application for work permit must be within 6 months of completion of study.",
+            "othere": "You can apply with your study permit or as a visitor (from abroad) if the study permit has expired.",
+            "otherf": "Unlike other Canadian work permit, it doesn’t require a Labour Market Impact Assessment (LMIA)"
+        },
+        "image": "https://cdn.pixabay.com/photo/2017/05/09/03/47/buildings-2297210_1280.jpg"
+    },
+    {
+        "id": 6,
+        "logo": "https://cdn.worldvectorlogo.com/logos/canada-logo.svg",
+        "country": "CANADA",
+        "Visatype": "PNP",
+        "overview": "The Provincial Nominee Program (PNP) is one of the pathways to becoming a Canadian permanent resident. As intended, the PNP is designed to meet the Canadian economic and demographic needs by provinces. Therefore, requirements and procedures for application differ by provinces. Only Quebec does not have a PNP, and it has other better immigration programs.",
+        "requirements": {
+            "requirementa": "Requirements as requested by the province such as skills, education, or work experience.",
+            "requirementb": "Nomination by a Canadian province."
+        },
+        "others": {
+            "othera": "Processing period: 6 - 18 months",
+            "otherb": "The Express Entry system is developed to manage applications for permanent residence including PNP.",
+            "otherc": "This requires you to set up an express entry profile and (i) apply to your chosen province stream or (ii) get nominated by a province            ",
+            "otherd": "Once nominated, you'll be notified through your account.",
+            "othere": "You can then proceed by further processing your profile with the nomination which gives your extra scores"
+        },
+        "image": "https://cdn.pixabay.com/photo/2017/05/09/03/47/buildings-2297210_1280.jpg"
+    },
+    {
+        "id": 7,
+        "logo": "https://cdn.worldvectorlogo.com/logos/canada-logo.svg",
+        "country": "CANADA",
+        "Visatype": "CEC",
+        "overview": "The Canadian Experience Class is designed for skilled or professional workers who have Canadian work experience and aim to become permanent residents. It is one of the fastest routes to become a Canadian permanent resident.",
+        "requirements": {
+            "requirementa": "Proof of proficiency in Language, usually English or French",
+            "requirementb": "At least 1 year work experience in Canada with a temporary resident status and authorization to work. N.B.: Work experience must be within 3 years from date of submission of application."
+        },
+        "others": {
+            "othera": "Processing period: 3 - 4 months",
+            "otherb": "CEC applications are managed through the Express Entry System, and this requires you to set up an Express Entry profile.",
+            "otherc": "This requires you to set up an express entry profile and (i) apply to your chosen province stream or (ii) get nominated by a province            ",
+            "otherd": "Candidates are ranked using a Comprehensive Ranking System. Upon evaluation, if your CRS score is competitive, you’ll receive an invite to apply for permanent residence."
+        },
+        "image": "https://cdn.pixabay.com/photo/2017/05/09/03/47/buildings-2297210_1280.jpg"
+    },
+    {
+        "id": 8,
+        "logo": "https://cdn.worldvectorlogo.com/logos/canada-logo.svg",
+        "country": "CANADA",
+        "Visatype": "Startup Visa",
+        "overview": "The Canadian start-up visa is designed for immigrant entrepreneurs who are interested in starting a business that will create new jobs or support other innovative entrepreneurs in Canada. This visa also qualifies one for a permanent residence.",
+        "requirements": {
+            "requirementa": "You own or created a qualified business with Proof of sufficient funds",
+            "requirementb": "Proof of support from a designated organization in Canada approved to invest in/ support possible start ups.",
+            "requirementc": "Proof of  proficiency in Language, usually English or French"
+        },
+        "others": {
+            "othera": "Processing period: 12 - 16 months",
+            "otherb": "You are to complete the application form, fulfill all required documents, and pay your application fees before submitting the application."
+        },
+        "image": "https://cdn.pixabay.com/photo/2017/05/09/03/47/buildings-2297210_1280.jpg"
+    },
+    {
+        "id": 9,
+        "logo": "https://cdn.worldvectorlogo.com/logos/flag-of-the-united-kingdom-2.svg",
+        "country": "U.K",
+        "Visatype": "Post Study",
+        "overview": "The UK post study work visa provides an appealing option for international students to be gainfully employed in the UK for up to 3 years for PhD students and 2 years for others. Moreso, the new immigration policy makes it easier for students in STEM (Science, Technology, Engineering and Mathematics) and other professional graduates to gain permanent residency status in the UK through the work visa.",
+        "requirements": {
+            "requirementa": "Valid student visa at time of application",
+            "requirementb": "Successfully completed an undergraduate or postgraduate studies in the UK",
+            "requirementc": "Confirmation of Acceptance of Studies (CAS) used in the most recent visa application"
+        },
+        "others": {
+            "othera": "The new application for post study work permit can only be done in the UK while your student visa is still valid.",
+            "otherb": "It does not require you to secure a job offer.",
+            "otherc": "Pay visa application fee and an immigration health surcharge payment."
+        },
+        "image": "https://cdn.pixabay.com/photo/2021/03/12/21/15/ship-6090523__480.jpg"
+    },
+    {
+        "id": 10,
+        "logo": "https://cdn.worldvectorlogo.com/logos/flag-of-the-united-kingdom-2.svg",
+        "country": "U.K",
+        "Visatype": "Work Permit",
+        "overview": "The Tier 2 work visa is now known as Skilled Worker Visa. The skilled work visa allows you to work with an approved employer in the UK for up to 5 years with a possibility of extension even if you change your job or employer. Although, changing your job or employer requires you to apply for an update on your visa. You may also be eligible to apply for permanent residence after this 5 years.",
+        "requirements": {
+            "requirementa": "Valid passport and Proof of proficiency in English language",
+            "requirementb": "Certificate of Sponsorship from your employer i.e you must have a job offer before applying for visa. NB: Job offer must meet the minimum salary threshold to be acceptable",
+            "requirementc": "Qualify for an eligible occupation."
+        },
+        "others": {
+            "othera": "Processing period: 3 - 10 weeks.",
+            "otherb": "You’ll be required to prove your identity by completing your Biometrics at visa application centre or create/ sign in to your UK Visas and Immigration (UKVI) account using the ‘UK immigration: ID check’ app to upload the required document(s).",
+            "otherc": "While applying for the visa you’re to: pay visa application fee, pay healthcare surcharge for each year and show sufficient funds for upkeeps either through a bank statement or guarantee from your employer."
+        },
+        "image": "https://cdn.pixabay.com/photo/2021/03/12/21/15/ship-6090523__480.jpg"
+    },
+    {
+        "id": 11,
+        "logo": "https://cdn.worldvectorlogo.com/logos/flag-of-the-united-kingdom-2.svg",
+        "country": "U.K",
+        "Visatype": "Tier 1 (E)",
+        "overview": "There are different categories of Tier 1 visa. The Tier 1 visa is usually issued to Investors, Entrepreneurs and those with Global Talent. The visa for exceptional promising talent was replaced by the Global Talent Visa. If eligible, you can live and work in the UK for up to 5 years. Of the advantages is that there’s no limit as to how long you can stay in the UK, you’ll only be required to renew your visa when it expires.",
+        "requirements": {
+            "requirementa": "Valid passport and Proof of proficiency in English language",
+            "requirementb": "Proof of endorsement as an emerging or recognised leader in Science, Engineering, Health, Digital technology or Art and Humanities industries."
+            
+        },
+        "others": {
+            "othera": "Processing period: 3 - 8 weeks.",
+            "otherb": "You are to first apply for an endorsement by an organisation approved by the Home Office.",
+            "otherc": "Your endorsement must be valid and must be within 3 months of applying for the visa.",
+            "otherd": "You’ll be required to prove your identity by completing your Biometrics at visa application centre or create/ sign in to your UK Visas and Immigration (UKVI) account using the ‘UK immigration: ID check’ app to upload the required document(s)."
+        },
+        "image": "https://cdn.pixabay.com/photo/2021/03/12/21/15/ship-6090523__480.jpg"
+    },
+    {
+        "id": 12,
+        "logo": "https://cdn.worldvectorlogo.com/logos/flag-of-the-united-kingdom-2.svg",
+        "country": "U.K",
+        "Visatype": "Startup Visa",
+        "overview": "The UK start-up visa is a category of the Tier 1 visa. It is designed for individuals that want to set up an innovative business in the UK. The visa can only be granted for 2 years without extension, even if you apply for a new visa or endorsement. However, you can switch to an innovator visa to extend your stay and develop your business. The innovator visa is valid for 3 years and is extendable.",
+        "requirements": {
+            "requirementa": "Innovative business",
+            "requirementb": "Proof of endorsement by an authorised UK organisation, Proof of proficiency in English language & Proof of sufficient funds"
+            
+        },
+        "others": {
+            "othera": "Processing period: 3 - 8 weeks.",
+            "otherb": "You are to first apply for an endorsement by an organisation approved by the Home Office.",
+            "otherc": "You’ll be required to prove your identity by completing your Biometrics at visa application centre or create/ sign in to your UK Visas and Immigration (UKVI) account using the ‘UK immigration: ID check’ app to upload the required document(s)."
+        },
+        "image": "https://cdn.pixabay.com/photo/2021/03/12/21/15/ship-6090523__480.jpg"
+    },
+    {
+        "id": 13,
+        "logo": "https://cdn.worldvectorlogo.com/logos/australia-2.svg",
+        "country": "Australia",
+        "Visatype": "POST GRADUATION WORK PERMIT",
+        "overview": "The post graduation work permit gives international students who have graduated with at least a bachelor degree in Australia the opportunity to gain work experience in Australia. The post-study work visa is valid for 2 years for a bachelor or masters degree by coursework, 3 years for a masters degree by research, and 4 years for a doctoral degree.",
+        "requirements": {
+            "requirementa": "Completion of at least an Australian bachelor degree within six months of applying for the visa.",
+            "requirementb": "Your field of study must be amongst the Skilled Occupation List and the duration of course of study must be for at least 2 academic years"
+            
+        },
+        "others": {
+            "othera": "Processing period: 6 - 12 months",
+            "otherb": "Once you’ve met all requirements stated above, you can apply for your visa online with all necessary supporting documents.",
+            "otherc": "For students that do not qualify for the post-study visa, they can apply for a temporary Skilled Graduate Visa that can allow them to live and work in Australia for a period of 18 months after completion of studies."
+        },
+        "image": "https://cdn.pixabay.com/photo/2014/04/04/10/51/cityscape-313216_1280.jpg"
+    },
+    {
+        "id": 14,
+        "logo": "https://cdn.worldvectorlogo.com/logos/australia-2.svg",
+        "country": "Australia",
+        "Visatype": "Residence Visa",
+        "overview": "",
+        "requirements": {
+            "requirementa": "",
+            "requirementb": ""
+            
+        },
+        "others": {
+            "othera": "",
+            "otherb": "",
+            "otherc": ""
+        },
+        "image": "https://cdn.pixabay.com/photo/2014/04/04/10/51/cityscape-313216_1280.jpg"
+    },
+    {
+        "id": 15,
+        "logo": "https://cdn.worldvectorlogo.com/logos/germanyc.svg",
+        "country": "Germany",
+        "Visatype": "GERMANY POST GRADUATION WORK PERMIT",
+        "overview": "",
+        "requirements": {
+            "requirementa": "",
+            "requirementb": ""
+            
+        },
+        "others": {
+            "othera": "",
+            "otherb": "",
+            "otherc": ""
+        },
+        "image": "https://cdn.pixabay.com/photo/2014/11/10/07/01/industry-525119_1280.jpg"
+    },
+    {
+        "id": 16,
+        "logo": "https://cdn.worldvectorlogo.com/logos/germanyc.svg",
+        "country": "Germany",
+        "Visatype": "Work Permit",
+        "overview": "",
+        "requirements": {
+            "requirementa": "",
+            "requirementb": ""
+            
+        },
+        "others": {
+            "othera": "",
+            "otherb": "",
+            "otherc": ""
+        },
+        "image": "https://cdn.pixabay.com/photo/2014/11/10/07/01/industry-525119_1280.jpg"
+    }
+
+    
+]

@@ -27,10 +27,22 @@
                
                 <!-- <job-item></job-item> -->
                   <div class="relative pt-1 lg:mb-20 mx-2 border lg:mx-1 lg:mt-6 lg:py-2 ">
-                    <div class="">
-                      <div  v-for="job in filteredRows" v-bind:key="job.id" class="max-w-full lg:mx-10 mb-4 bg-white rounded-3xl flex">
+                    <!-- {{ userProfile.name  }} 
+                    <br >
+                    {{ getDataCollected.filter( dat => dat.userName  == userProfile.name ) }}
+                     <br >
+                    {{ filteredArray }}
+                    <br>
+                    <div v-for=" datat in getDataCollected" :key="datat.id" >
+                      <div v-if=" datat.userName == userProfile.name " >
+                        {{ datat.pickedVisa  }}
+                      </div>
+                    </div> -->
 
-                          <div class="flex lg:w-6/12 py-5" v-if="job.open"  >
+                    <div class="">
+                      <div  v-for="job in filteredRows" :key="job.id" class="max-w-full lg:mx-10 mb-4 bg-white rounded-3xl flex">
+
+                          <div class="flex lg:w-6/12 py-5" v-if="job.open" >
 
                               <div class="ml-6 mr-5 lg:block hidden">
                                   <img class="lg:h-16 lg:w-16 w-12 h-8 rounded" :src=job.logo alt="" />
@@ -102,6 +114,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
 import JobItem from '../Job/JobItem'
@@ -120,14 +133,28 @@ export default {
         }
     },
   computed: {
+  ...mapState(['userProfile' , 'getDataCollected']),
+  filteredArray(){
+      let filt;
+      for ( let i = 0 ; i < this.getDataCollected.length; i++ ){
+        if(this.getDataCollected[i].userName === this.userProfile.name ){
+          filt = this.getDataCollected[i].pickedVisa
+        }
+      }
+      // const filteredData = this.getDataCollected.filter( dat => dat.userName  == this.userProfile.name )
+      // const filt = filteredData
+      //  return filteredData
+      // console.log(6, filt)
+      return filt
+      
+  },
   filteredRows() {
     return this.data.filter(job => {
       const jobVisa = job.Visa.toString().toLowerCase();
-      // const searchTerm = this.filter.toLowerCase();
-      const searchTerm2 = this.$store.state.pickedVisa.toString().toLowerCase();
-      // console.log(searchTerm2)
-
-      return jobVisa.includes(searchTerm2)
+      const searchTerm = this.filteredArray.toString().toLowerCase()
+      // console.log(11, searchTerm)
+      // console.log(9, jobVisa.includes(searchTerm))
+      return jobVisa.includes(searchTerm)
     });
   },
   visaComp() {

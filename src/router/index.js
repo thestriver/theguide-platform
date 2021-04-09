@@ -107,6 +107,22 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "login" */ '../views/auth/Login.vue')
+  },
+  {
+    path: '/details',
+    name: 'Data Collection',
+    component: () => import(/* webpackChunkName: "login" */ '../views/DataColl.vue'),
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/admin/immguides',
+    name: 'Immigration Guides',
+    component: () => import(/* webpackChunkName: "login" */ '@/components/Cards/ImmiHub/CardDetails.vue'),
+    meta: {
+      requiresAuth: true
+    }
   }
 ]
 

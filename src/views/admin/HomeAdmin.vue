@@ -1,7 +1,7 @@
 <template>
-    <div class="px-4 bg-gray-900  py-6 mx-5 lg:mx-24 rounded-xl lg:my-14  sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-20 lg:py-20">
+    <div class="px-4  py-6 mx-5 lg:mx-24 rounded-xl lg:my-14  sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-20 lg:py-20">
       <div class="grid lg:gap-20 gap-6 row-gap-8 lg:grid-cols-2">
-        <div class="flex flex-col justify-center text-center lg:py-5  p-5 rounded-2xl bg-white">
+        <div class="flex flex-col justify-center text-center lg:py-5  p-5 rounded-2xl bg-white transition duration-300 transform border-2 border-green-600 shadow-sm hover:scale-105 group hover:shadow-xl">
           <div class="max-w-xl mb-6 lg:mb-6">
             <div>
               <p class="inline-block px-3 py-px lg:mb-6 lg:mt-5 mb-4 text-xs font-semibold tracking-wider text-gray-100  uppercase rounded-full bg-green-600">
@@ -20,7 +20,7 @@
                     </span>
             </p> -->
           </div>
-          <router-link to="/admin/careerbot">
+          <router-link to="/admin/career-hub">
           <a aria-label="" class="inline-flex lg:px-10 lg:py-3 py-3 px-10 rounded-lg items-center font-semibold transition lg:text-xl duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-gray-100 bg-green-600 ">
             Get Started
             <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Second -->
-        <div class="relative  justify-center  text-center p-5  lg:py-10 lg:px-10 rounded-2xl bg-white">
+        <div class="relative  justify-center  text-center p-5  lg:py-10 lg:px-10 rounded-2xl bg-white transition duration-300 transform border-2 border-green-600 shadow-sm hover:scale-105 group hover:shadow-xl ">
             <div class="flex flex-col justify-center">
             <div class="max-w-xl mb-6 text-center ">
                 <div>

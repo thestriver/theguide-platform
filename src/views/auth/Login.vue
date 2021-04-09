@@ -86,7 +86,7 @@
 
               <div class="text-center mt-6">
                 <button
-                  class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                  class="bg-gray-900 text-white hover:bg-green-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                   type="button"
                   @click="login()"
                 >
@@ -210,25 +210,23 @@
                 />
               </div>
 
-              <!-- <div>
+              <div>
+                
                 <label class="inline-flex items-center cursor-pointer">
-                  <input
+                  <input required
                     id="customCheckLogin"
                     type="checkbox"
                     class="form-checkbox text-gray-800 ml-1 w-5 h-5 ease-linear transition-all duration-150"
                   />
-                  <span class="ml-2 text-sm font-semibold text-gray-700">
-                    I agree with the
-                    <a href="javascript:void(0)" class="text-green-500">
-                      Privacy Policy
-                    </a>
+                  <span class="ml-2 text-xs font-semibold text-gray-700">
+                   By signing up, you agree to our <span class="text-green-500 cursor-pointer ">Terms and Conditions</span> and our <span class="text-green-500 cursor-pointer">Privacy Policy </span>
                   </span>
                 </label>
-              </div> -->
+              </div>
 
               <div class="text-center mt-6">
                 <button
-                  class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                  class="bg-gray-900 text-white hover:bg-green-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                   type="button"
                   @click="signup()"
                 >

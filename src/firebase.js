@@ -23,14 +23,20 @@ const firebaseConfig = {
 const db = firebase.firestore()
 const auth = firebase.auth()
 
+
 // collection references
 const usersCollection = db.collection('users')
-// const admissionsCollection = db.collection('admissions')
+const formDataCollection = db.collection('dataCollected')
+
+// const formDataUserSpecific =   usersCollection.doc(auth.currentUser.uid).collection('dataCollected')
+// const userId = fb.auth.currentUser.uid
+// userRef = await fb.usersCollection.doc(userId)
 
 // export utils/refs
 export {
   db,
   auth,
-  usersCollection
-  // admissionsCollection
+  usersCollection,
+  formDataCollection,
+  // formDataUserSpecific
 }

@@ -3,7 +3,8 @@
    <home-navbar v-if="showNav"></home-navbar>
    <!-- <side-nav-cola></side-nav-cola> -->
    <!-- <home-intro></home-intro> -->
-   <h2 class="text-4xl font-bold text-left lg:mx-24 mx-4 my-10  lg:my-10 ">Welcome, <span class="text-green-600 font-bold "> {{ userProfile.name }}  </span> </h2>
+   <!-- <h2 class="text-4xl font-bold text-left lg:mx-24 mx-4 my-10  lg:my-10 ">Welcome, <span class="text-green-600 font-bold "> {{ userProfile.name }}  </span> </h2>
+    -->
    <home-admin></home-admin>
 
    <!-- <home-career></home-career>

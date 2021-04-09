@@ -16,23 +16,30 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 let app;
 
+
 auth.onAuthStateChanged(user => {
     if (!app) {
+        
         app = createApp(App)
         app.use(store)
         app.use(router)
         app.use(VueScrollTo)
+       
         // app.use(VueMailchimpEmailSignupForm)
         // app.use(Splitpanes)
         // app.use(Pane)
         app.mount('#app')
     }
-
+    
     //maintains the user logic state on reload
     if (user) {
         store.dispatch('fetchUserProfile', user)
-      }
+        // store.dispatch('dataFetch')
+    }
 
+    // this.$store.commit('initialiseStore')
+    
+    
 })
 
 
