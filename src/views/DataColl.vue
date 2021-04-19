@@ -40,7 +40,7 @@
 					<span class="ml-2">H1b</span>
 					</label>
 
-					<span class="mt-5 block">Picked: {{ dataCollected.pickedVisa }}</span>
+					<!-- <span class="mt-5 block">Picked: {{ dataCollected.pickedVisa }}</span> -->
 				<div class="mt-2">
 					<span class="text-gray-900 mr-6">
 						Part-time or Full Time?
@@ -54,7 +54,7 @@
 					<span class="ml-2">Full-Time</span>
 					</label>
 
-					<span class="my-6 block">Selected: {{ dataCollected.openTime }}</span>
+					<!-- <span class="my-6 block">Selected: {{ dataCollected.openTime }}</span> -->
 				</div>
 			</div>
 			<div class="pt-6 pb-4 space-y-2">
@@ -81,7 +81,7 @@
                             <input type="radio" class="form-radio text-red-800 " name="5" value="5" v-model="dataCollected.pickedNumber" />
                             <span class="ml-2">5</span>
                             </label>
-                            <span class="mt-5 block">Picked: {{ dataCollected.pickedNumber }}</span>
+                            <!-- <span class="mt-5 block">Picked: {{ dataCollected.pickedNumber }}</span> -->
                         </div>          
 						<div>
 							<label class="block mt-4">
@@ -92,7 +92,7 @@
 								{{ option.text }} 
 								</option>
 							</select>
-							<span class="mt-6 block">Selected: {{ dataCollected.selected }}</span>
+							<!-- <span class="mt-6 block">Selected: {{ dataCollected.selected }}</span> -->
 							</label>		
 						</div>
                         <div class="mt-2">
@@ -105,7 +105,7 @@
                             <input type="radio" class="form-radio" name="No" value="No" v-model="dataCollected.open" />
                             <span class="ml-2">No</span>
                             </label>
-                            <span class="mt-6 block">Selected: {{ dataCollected.open }}</span>
+                            <!-- <span class="mt-6 block">Selected: {{ dataCollected.open }}</span> -->
                         </div>
 				</div>
 			</div>

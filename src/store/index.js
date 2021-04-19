@@ -30,7 +30,9 @@ const store = createStore({
     getDataCollected: [],
     id: 1,
     // pickedVisa: '',
-    agreedToPrivacy: false
+    agreedToPrivacy: false,
+    loginError: '',
+     errArr: []
   },
   plugins: [createPersistedState()],
   mutations: {
@@ -51,7 +53,20 @@ const store = createStore({
       state.getDataCollected = val
       // console.log(3, state.getDataCollected)
     },
-    
+    setError(state, val) {
+      if(val === 'auth/user-not-found'){
+         state.loginError = 'User not found. Please put in the correct username'
+         state.errArr.push(val)
+          alert(state.loginError)
+        }
+        else if(val === 'auth/wrong-password'){
+          state.loginError = 'The password is invalid. Please put in the correct password' 
+          alert(state.loginError)
+      }
+      
+      // console.log(3, state.getDataCollected)
+    },
+
     agreePrivacyPolicy(state) {
       localStorage.setItem('agreedToPrivacy', true);
       state.agreedToPrivacy = true;
@@ -64,7 +79,18 @@ const store = createStore({
       // login
       async login({ dispatch }, form) {
         // sign user in
-        const { user } = await fb.auth.signInWithEmailAndPassword(form.email, form.password)
+        const { user } = await fb.auth.signInWithEmailAndPassword(form.email, form.password).catch((error) => {
+          var errorCode = error.code;
+          dispatch('createError', errorCode)
+          // if(errorCode === 'auth/user-not-found'){
+          //   console.log(errorCode, 'User not found. Please put in the correct username')
+          // }
+          // else if(errorCode === 'auth/wrong-password'){
+          //   console.log(errorCode, 'The password is invalid. Please put in the correct password')
+          // }
+          // var errorMessage = error.message;
+          // console.log(errorMessage)
+        });
     
         // fetch user profile and set in state
         dispatch('fetchUserProfile', user)
@@ -91,6 +117,9 @@ const store = createStore({
         //   router.push('/admin')
         // }
         
+      },
+      async createError({ commit }, errorCode) {
+        commit("setError", errorCode);
       },
        // SiGNUP
       async signup({ dispatch }, form) {

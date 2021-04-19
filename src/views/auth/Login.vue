@@ -104,6 +104,7 @@
                   <div class="inline-block animate-pulse ease duration-300 w-5 h-5 bg-black mx-2"></div>
                   <div class="inline-block animate-bounce ease duration-300 w-5 h-5 bg-black mx-2"></div>
                 </div>
+                <span class="text-red-700 text-sm "> {{alerted}} </span>
               </div>
             </form>
           </div>
@@ -169,6 +170,7 @@
             <div class="text-gray-500 text-center pt-4 mb-3 font-bold">
               
               <h2>Please sign up with your credentials</h2>
+              <p class="text-3xl"><strong class="text-red-600 "> {{ console.log(store.state.loginError )}} </strong></p>
             </div>
             <form @submit.prevent>
               <div  class="relative w-full mb-3">
@@ -254,6 +256,10 @@
                 >
                   Create Account
                 </button>
+                
+                <span class="text-red-700 text-sm "> {{loge }} </span>
+                <span class="text-red-700 text-sm "> {{alerted}} </span>
+                
                 <div v-if="showAnimation" class="relative flex justify-center items-center mt-4">
                   <div class="inline-block animate-spin ease duration-300 w-5 h-5 bg-black mx-2"></div>
                   <div class="inline-block animate-ping ease duration-300 w-5 h-5 bg-black mx-2"></div>
@@ -279,7 +285,7 @@
 </div>
 </template>
 <script>
-
+import { mapState } from 'vuex'
 import useVuelidate from '@vuelidate/core'
 import { required, helpers,  email, minLength } from '@vuelidate/validators'
 
@@ -297,6 +303,8 @@ export default {
       // github,
       // google,
       // registerBg2
+      loge :'',
+      alerted: '',
       logo,
       loginForm: {
         email: '',
@@ -315,6 +323,8 @@ export default {
     };
   },
   validations () {
+    const containsNumber = (value) => /[0-9]/.test(value);
+    const containsSpecial = (value) => /[#?!@$%^&*-]/.test(value);
     return {
       loginForm: {
         email: { required: helpers.withMessage('This field cannot be empty', required), email },
@@ -323,7 +333,9 @@ export default {
       signupForm: {
         name: { required: helpers.withMessage('This field cannot be empty', required), minLengthValue: minLength(3), },
         email: { required: helpers.withMessage('This field cannot be empty', required), email },
-        password: { required: helpers.withMessage('This field cannot be empty', required),
+        password: { required: helpers.withMessage('This field cannot be empty', required), 
+        containsNumber: helpers.withMessage('Password has to contain a number', containsNumber)  ,
+        containsSpecial: helpers.withMessage('Password has to contain a special character', containsSpecial)  ,
         // valid: function (value) {
         //   const containsUppercase = /[A-Z]/.test(value);
         //   const containsLowercase = /[a-z]/.test(value);
@@ -355,7 +367,7 @@ export default {
     login() {
       this.v$.$validate() // checks all inputs
       // console.log(this.v$)
-      if (this.v$.$errors.length <= 3) { // if ANY fail validation
+      if (this.v$.$errors.length <= 5) { // if ANY fail validation
         // alert('Form successfully submitted.')
         this.showAnimation = !this.showAnimation
         this.$store.dispatch('login', {
@@ -364,9 +376,10 @@ export default {
           })
 
       } else {
-        alert('Form failed validation. Please fill the correct information')
+        this.alerted = 'Wrong details. Please fill the correct information'
       }
 
+    //https://firebase.google.com/docs/auth/web/manage-users#send_a_user_a_verification_email
 
     // if (this.v$.$error) return
     // this.showAnimation = !this.showAnimation
@@ -377,7 +390,7 @@ export default {
     },
     signup() {
       this.v$.$validate() // checks all inputs
-      // console.log(this.v$)
+      console.log(this.v$)
       if (this.v$.$errors.length <= 2) { // if ANY fail validation
         // alert('Form successfully submitted.')
         this.showAnimation = !this.showAnimation
@@ -388,7 +401,7 @@ export default {
         title: this.signupForm.title
         })  
       } else {
-        alert('Form failed validation. Please fill the correct information')
+        this.alerted = 'Please fill the correct details'
       }
       // this.v$.$touch()
       // if (this.$v.$invalid){
@@ -410,6 +423,11 @@ export default {
       
       
     }
-  }
+  },
+  computed: {
+    ...mapState(['loginError', 'errArr']),
+    
+
+  },
 };
 </script>
