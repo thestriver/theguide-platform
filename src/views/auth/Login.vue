@@ -42,7 +42,7 @@
               <small>Sign in with your credentials</small>
             </div>
             <form @click.prevent>
-              <div class="relative w-full mb-3">
+              <div :class="{ error: v$.loginForm.email.$errors.length }" class="relative w-full mb-3">
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-password"
@@ -55,9 +55,12 @@
                   placeholder="Email"
                   v-model.trim="loginForm.email"
                 />
+                <div class="input-errors" v-for="(error, index) of v$.loginForm.email.$errors" :key="index" >
+                  <span v-if="v$.loginForm.email.$error" class="error-msg text-xs text-red-700" id="">{{ error.$message }}</span>
+                </div>
               </div>
 
-              <div class="relative w-full mb-3">
+              <div :class="{ error: v$.loginForm.password.$errors.length }" class="relative w-full mb-3">
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-password"
@@ -70,6 +73,9 @@
                   placeholder="Password"
                   v-model.trim="loginForm.password"
                 />
+                <div class="input-errors" v-for="(error, index) of v$.loginForm.password.$errors" :key="index" >
+                  <span v-if="v$.loginForm.password.$error" class="error-msg text-xs text-red-700" id="">{{ error.$message }}</span>
+                </div>
               </div>
               <!-- <div>
                 <label class="inline-flex items-center cursor-pointer">
@@ -158,14 +164,15 @@
             </div>
             <hr class="mt-6 border-b-1 border-gray-400" />
           </div> -->
-          <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+          <div class="flex-auto px-4 lg:px-10 py-10 pt-0" >
             <img :src="logo" alt="logo" class=" rounded  mx-auto w-1/2 py-4">
             <div class="text-gray-500 text-center pt-4 mb-3 font-bold">
               
-              <h2>Please Sign up with credentials</h2>
+              <h2>Please sign up with your credentials</h2>
             </div>
-            <form>
-              <div class="relative w-full mb-3">
+            <form @submit.prevent>
+              <div  class="relative w-full mb-3">
+                <!-- :class="{ error: v$.signupForm.name.$errors.length }" -->
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-password"
@@ -173,14 +180,17 @@
                   Name
                 </label>
                 <input
-                  type="email"
-                  class="required px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                  type="name"
+                  class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                   placeholder="Name"
                   v-model.trim="signupForm.name"
                 />
+                <div class="input-errors" v-for="(error, index) of v$.signupForm.name.$errors" :key="index" >
+                  <span v-if="v$.signupForm.name.$error" class="error-msg text-xs text-red-700" id="">{{ error.$message }}</span>
+                </div>
               </div>
 
-              <div class="relative w-full mb-3">
+              <div :class="{ error: v$.signupForm.email.$errors.length }" class="relative w-full mb-3">
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-password"
@@ -193,9 +203,12 @@
                   placeholder="Email"
                   v-model.trim="signupForm.email"
                 />
+                <div class="input-errors" v-for="(error, index) of v$.signupForm.email.$errors" :key="index" >
+                  <span v-if="v$.signupForm.email.$error" class="error-msg text-xs text-red-700" id="">{{ error.$message }}</span>
+                </div>
               </div>
 
-              <div class="relative w-full mb-3">
+              <div :class="{ error: v$.signupForm.password.$errors.length }" class="relative w-full mb-3">
                 <label
                   class="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-password"
@@ -208,27 +221,36 @@
                   placeholder="Password"
                   v-model.trim="signupForm.password"
                 />
+                <div class="input-errors" v-for="(error, index) of v$.signupForm.password.$errors" :key="index" >
+                  <span v-if="v$.signupForm.password.$error" class="error-msg text-xs text-red-700" id="">{{ error.$message }}</span>
+                  
+                </div>
               </div>
-
+              <br class=""><span class="pt-40" :style="{ 'margin-top': '2000'}" >
+                    <!-- status: {{ v$.validate()}} -->
+                  </span>
               <div>
                 
-                <label class="inline-flex items-center cursor-pointer">
-                  <input required
+                <!-- <label class="inline-flex items-center cursor-pointer">
+                  <input
                     id="customCheckLogin"
                     type="checkbox"
                     class="form-checkbox text-gray-800 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+                     v-model.trim="checkboxed"
                   />
                   <span class="ml-2 text-xs font-semibold text-gray-700">
                    By signing up, you agree to our <span class="text-green-500 cursor-pointer ">Terms and Conditions</span> and our <span class="text-green-500 cursor-pointer">Privacy Policy </span>
                   </span>
-                </label>
+                </label> -->
+                
               </div>
-
+              
               <div class="text-center mt-6">
                 <button
+                 @click="signup"
                   class="bg-gray-900 text-white hover:bg-green-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                  type="button"
-                  @click="signup()"
+                  type="submit"
+            
                 >
                   Create Account
                 </button>
@@ -258,6 +280,9 @@
 </template>
 <script>
 
+import useVuelidate from '@vuelidate/core'
+import { required, helpers,  email, minLength } from '@vuelidate/validators'
+
 import logo from "@/assets/images/Logo(2)copy.png";
 import PasswordReset from '@/components/PasswordReset'
 
@@ -265,8 +290,10 @@ export default {
   components: {
     PasswordReset
   },
+  setup: () => ({ v$: useVuelidate() }), 
   data() {
     return {
+      // v$: useVuelidate(),
       // github,
       // google,
       // registerBg2
@@ -281,10 +308,42 @@ export default {
         email: '',
         password: ''
       },
+      checkboxed: '',
       showLoginForm: true,
       showPasswordReset: false,
       showAnimation: false
     };
+  },
+  validations () {
+    return {
+      loginForm: {
+        email: { required: helpers.withMessage('This field cannot be empty', required), email },
+        password: { required: helpers.withMessage('This field cannot be empty', required), }
+      },
+      signupForm: {
+        name: { required: helpers.withMessage('This field cannot be empty', required), minLengthValue: minLength(3), },
+        email: { required: helpers.withMessage('This field cannot be empty', required), email },
+        password: { required: helpers.withMessage('This field cannot be empty', required),
+        // valid: function (value) {
+        //   const containsUppercase = /[A-Z]/.test(value);
+        //   const containsLowercase = /[a-z]/.test(value);
+        //   const containsNumber = /[0-9]/.test(value);
+        //   const containsSpecial = /[#?!@$%^&*-]/.test(value);
+        //   return (
+        //     containsUppercase &&
+        //     containsLowercase &&
+        //     containsNumber &&
+        //     containsSpecial
+        //   );
+        // }, 
+        minLength: helpers.withMessage(
+      ({
+        $params
+      }) => `Your password must have a min length of ${$params.min}`,
+      minLength(6), ),
+      }
+      }
+    }
   },
   methods: {
     toggleForm() {
@@ -294,20 +353,62 @@ export default {
       this.showPasswordReset = !this.showPasswordReset
     },
     login() {
-    this.showAnimation = !this.showAnimation
-    this.$store.dispatch('login', {
-      email: this.loginForm.email,
-      password: this.loginForm.password
-      })
+      this.v$.$validate() // checks all inputs
+      // console.log(this.v$)
+      if (this.v$.$errors.length <= 3) { // if ANY fail validation
+        // alert('Form successfully submitted.')
+        this.showAnimation = !this.showAnimation
+        this.$store.dispatch('login', {
+          email: this.loginForm.email,
+          password: this.loginForm.password
+          })
+
+      } else {
+        alert('Form failed validation. Please fill the correct information')
+      }
+
+
+    // if (this.v$.$error) return
+    // this.showAnimation = !this.showAnimation
+    // this.$store.dispatch('login', {
+    //   email: this.loginForm.email,
+    //   password: this.loginForm.password
+    //   })
     },
     signup() {
-      this.showAnimation = !this.showAnimation
-      this.$store.dispatch('signup', {
+      this.v$.$validate() // checks all inputs
+      // console.log(this.v$)
+      if (this.v$.$errors.length <= 2) { // if ANY fail validation
+        // alert('Form successfully submitted.')
+        this.showAnimation = !this.showAnimation
+        this.$store.dispatch('signup', {
         email: this.signupForm.email,
         password: this.signupForm.password,
         name: this.signupForm.name,
         title: this.signupForm.title
-      })  
+        })  
+      } else {
+        alert('Form failed validation. Please fill the correct information')
+      }
+      // this.v$.$touch()
+      // if (this.$v.$invalid){
+      //   console.log('poo')
+      // }
+      // else{
+      //    console.log('works!')
+      // }
+     
+     
+
+      // this.showAnimation = !this.showAnimation
+      // this.$store.dispatch('signup', {
+      // email: this.signupForm.email,
+      // password: this.signupForm.password,
+      // name: this.signupForm.name,
+      // title: this.signupForm.title
+      // })  
+      
+      
     }
   }
 };

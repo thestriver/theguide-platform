@@ -4,24 +4,24 @@ import router from '../router/index'
 // import account from './modules/account'
 import createPersistedState from "vuex-persistedstate";
 
-// realtime firebase connection - necessary to update in real time as changes are made to the postsCollection in the database.
-//.where("userName", "==", store.state.userProfile.name)
+// // realtime firebase connection - necessary to update in real time as changes are made to the postsCollection in the database.
+// //.where("userName", "==", store.state.userProfile.name)
 
-fb.formDataCollection.onSnapshot(snapshot => {
-  // fb.formDataUserSpecific.onSnapshot(snapshot => {
-  let dataCollectedArray = []
-  //we then take that data and atach an id that will make the lookup in the future easy.
-  snapshot.forEach(doc => {
-    let dataCollected = doc.data()
-    // console.log(2, dataCollected)
-    dataCollected.id = doc.id
+// fb.formDataCollection.onSnapshot(snapshot => {
+//   // fb.formDataUserSpecific.onSnapshot(snapshot => {
+//   let dataCollectedArray = []
+//   //we then take that data and atach an id that will make the lookup in the future easy.
+//   snapshot.forEach(doc => {
+//     let dataCollected = doc.data()
+//     // console.log(2, dataCollected)
+//     dataCollected.id = doc.id
     
-    dataCollectedArray.push(dataCollected)
+//     dataCollectedArray.push(dataCollected)
     
-  })
-  //then a mutation to commit that to state
-  store.commit('setDataCollected', dataCollectedArray)
-})
+//   })
+//   //then a mutation to commit that to state
+//   store.commit('setDataCollected', dataCollectedArray)
+// })
 
 
 const store = createStore({
@@ -157,6 +157,24 @@ const store = createStore({
 		open: dataCollected.open, selected: dataCollected.selected,
           userId: fb.auth.currentUser.uid,
           userName: state.userProfile.name
+        })
+        // realtime firebase connection - necessary to update in real time as changes are made to the postsCollection in the database.
+        //.where("userName", "==", store.state.userProfile.name)
+
+        fb.formDataCollection.onSnapshot(snapshot => {
+          // fb.formDataUserSpecific.onSnapshot(snapshot => {
+          let dataCollectedArray = []
+          //we then take that data and atach an id that will make the lookup in the future easy.
+          snapshot.forEach(doc => {
+            let dataCollected = doc.data()
+            // console.log(2, dataCollected)
+            dataCollected.id = doc.id
+            
+            dataCollectedArray.push(dataCollected)
+            
+          })
+          //then a mutation to commit that to state
+          store.commit('setDataCollected', dataCollectedArray)
         })
       },
       async createId({ commit }, id) {

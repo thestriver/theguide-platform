@@ -6,6 +6,7 @@ import { auth } from './firebase'
 import './index.css'
 import VueScrollTo from 'vue-scrollto'
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
 // import { VueMailchimpEmailSignupForm } from "vue-mailchimp-email-signup-form";
 // import VueSlickCarousel from 'vue-slick-carousel'
 // import { Splitpanes, Pane } from 'splitpanes'
