@@ -170,7 +170,7 @@
             <div class="text-gray-500 text-center pt-4 mb-3 font-bold">
               
               <h2>Please sign up with your credentials</h2>
-              <p class="text-3xl"><strong class="text-red-600 "> {{ console.log(store.state.loginError )}} </strong></p>
+              <!-- <p class="text-3xl"><strong class="text-red-600 "> {{ console.log(store.state.loginError )}} </strong></p> -->
             </div>
             <form @submit.prevent>
               <div  class="relative w-full mb-3">
@@ -426,7 +426,6 @@ export default {
   },
   computed: {
     ...mapState(['loginError', 'errArr']),
-    
 
   },
 };
